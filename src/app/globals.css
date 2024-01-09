@@ -3,18 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --light-primary-color: #0a0a0a;
+  --dark-primary-color: #c7c7c7;
+
+  --light-secondary-color: #000;
+  --dark-secondary-color: #fff;
+
+  --light-background: #fff;
+  --dark-background: #0a0a0a;
+
+  --btn-bg: #d3e971;
+}
+.para-full-screen {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.para-small-screen {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.project-headers-full {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 44.8px;
 }
+.project-headers-small {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 33.6px;
+}
+.light-bg {
+  background: var(--light-background);
+}
+.dark-bg {
+  background: var(--dark-background);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #c7c7c7;
+    --secondary-color: #fff;
+    --background: #0a0a0a;
+  }
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
