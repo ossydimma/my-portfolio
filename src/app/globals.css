@@ -42,6 +42,81 @@
   background: var(--dark-background);
 }
 
+.nav-text {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+.nav-text-active {
+  color:orange;
+}
+.nav-text:hover {
+  border-bottom: 2px solid orange
+}
+
+/*  toggle  styles*/
+label {
+  width: 48px;
+  height: 20px;
+  position: relative;
+  display: block;
+  background: var(--dark-primary-color);
+  border-radius: 200px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+label:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 1.5px;
+  background-color: #383333;
+  border-radius: 180px;
+  transition: 0.3s;
+}
+#darkmode-toggle {
+  
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  transform: translateX(27px);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+input:checked + label + .background {
+  background: #242424;
+}
+label svg {
+  position: absolute;
+  width: 13px;
+  top: 3.1px;
+  z-index: 100;
+}
+label svg.sun {
+  left: 2.9px;
+  fill: #d8860b;
+  transition: 0.3s;
+}
+label svg.moon {
+  left: 30px;
+  fill: #050505;
+  transition: 0.3s;
+}
+input:checked + label svg.sun {
+  fill: #d8860b;
+}
+input:checked + label svg.moon {
+  fill: #fff;
+}
+
+/* toggle styles end */
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #c7c7c7;
@@ -59,3 +134,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
