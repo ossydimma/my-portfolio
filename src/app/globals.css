@@ -12,7 +12,7 @@
   --light-background: #fff;
   --dark-background: #0a0a0a;
 
-  --btn-bg: #d3e971;
+  --foreground-color: #ffa500;
 }
 .para-full-screen {
   font-size: 18px;
@@ -47,10 +47,10 @@
   padding-bottom: 5px;
 }
 .nav-text-active {
-  color:orange;
+  color: var(--foreground-color);
 }
 .nav-text:hover, .nav-text-full:hover {
-  border-bottom: 3px solid #ffa500
+  border-bottom: 3px solid var(--foreground-color)
 }
 
 /*  toggle  styles*/
@@ -116,6 +116,18 @@ input:checked + label svg.moon {
 }
 
 /* toggle styles end */
+
+
+.btn {
+  background-color: var(--foreground-color);
+  height: 54px;
+  padding: 20px 6px 20px 24px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
 
 /* @media (prefers-color-scheme: dark) {
   :root {

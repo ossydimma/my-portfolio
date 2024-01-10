@@ -1,6 +1,6 @@
 "use client";
 // import type { Metadata } from 'next'
-import { Inter, Manrope, Bebas_Neue } from "next/font/google";
+import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import clsx from "clsx";
@@ -14,8 +14,8 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 
+export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
-const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 
 // interface themeType {
 //   theme: "light-bg" | "dark-bg";
