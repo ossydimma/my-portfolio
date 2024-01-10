@@ -140,7 +140,7 @@ export default function RootLayout({
                     </svg>
                   </li>
                 )}
-                <li className={window.innerWidth < 640 ? "nav-text" : ""}>
+                <li className={window.innerWidth < 640 ? "nav-text" : "nav-text-full"}>
                   <Link
                     href="/"
                     className={pathname === "/" ? "nav-text-active" : ""}
@@ -149,7 +149,7 @@ export default function RootLayout({
                     Home{" "}
                   </Link>
                 </li>
-                <li className={window.innerWidth < 640 ? "nav-text" : ""}>
+                <li className={window.innerWidth < 640 ? "nav-text" : "nav-text-full"}>
                   <Link
                     href="/about"
                     className={pathname === "/about" ? "nav-text-active" : ""}
@@ -157,7 +157,7 @@ export default function RootLayout({
                     About{" "}
                   </Link>
                 </li>
-                <li className={window.innerWidth < 640 ? "nav-text" : ""}>
+                <li className={window.innerWidth < 640 ? "nav-text" : "nav-text-full"}>
                   <Link
                     href="/work"
                     className={pathname === "/work" ? "nav-text-active" : ""}
@@ -165,7 +165,7 @@ export default function RootLayout({
                     Works{" "}
                   </Link>
                 </li>
-                <li className={window.innerWidth < 640 ? "nav-text" : ""}>
+                <li className={window.innerWidth < 640 ? "nav-text" : "nav-text-full"}>
                   <Link
                     href="/contact"
                     className={pathname === "/contact" ? "nav-text-active" : ""}
