@@ -50,7 +50,7 @@
   color:orange;
 }
 .nav-text:hover, .nav-text-full:hover {
-  border-bottom: 3px solid orange
+  border-bottom: 3px solid #ffa500
 }
 
 /*  toggle  styles*/
