@@ -67,7 +67,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header
           className={clsx(
-            " relative flex justify-between h-[8vh] my-1 mx-7 py-6   sm:my-1 xl:mx-[80px]",
+            " relative flex justify-between h-[8vh] py-4  mx-4 sm:py-6   sm:mx-7 xl:mx-[80px]",
             {
               " text-[--light-primary-color]": theme === "light-bg",
               " text-[--dark-primary-color]": theme === "dark-bg",
@@ -113,7 +113,7 @@ export default function RootLayout({
                 className={clsx(
                   `flex  font-medium text-[16px] mt-1 h-6   gap-[32px] ${bebasNeue.className}`,
                   {
-                    "flex-col absolute top-[-15px] right-[-60px] bg-[#fff]   text-[#0a0a0a] fill-[#0a0a0a] w-40 h-[450px] pb-20 px-3 uppercase":
+                    "flex-col absolute top-0 right-[-16px] bg-[#fff] z-10 text-[#0a0a0a] fill-[#0a0a0a] w-40 h-[450px] pb-20 px-3 uppercase sm:right-[-28px] xl:right-0":
                       window.innerWidth < 860,
                     "!bg-[#0a0a0a] text-[#c7c7c7] fill-[#c7c7c7] ":
                       theme === "light-bg" && window.innerWidth < 860,

@@ -14,7 +14,7 @@ export default function Home() {
 
 
   return (
-    <main className=" mx-[10px]  mt-[3vh] h-auto flex flex-col justify-between gap-16 items-center py-20 md:mx-[50px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-3 xl:mx-[108px]">
+    <main className=" mx-[10px]  mt-[3vh] h-auto flex flex-col justify-between gap-16 items-center py-10 md:mx-[50px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-3 xl:mx-[108px]">
       <section className=' w-[90%] lg:w-[340px] xl:w-[544px] '>
         <h1 className={ clsx (` uppercase font-[400] text-[40px] leading-[40px] text-[#0a0a0a] sm:text-[70px] sm:leading-[70px] md:text-[90px] md:leading-[80px] xl:text-[101px] xl:leading-[90.9px]  ${bebasNeue.className}`, {
           'text-[#fff]' : theme === "dark-bg",
