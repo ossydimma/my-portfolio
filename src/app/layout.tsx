@@ -17,11 +17,11 @@ import { usePathname } from "next/navigation";
 export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-// interface themeType {
-//   theme: "light-bg" | "dark-bg";
-//   setTheme?: Dispatch<SetStateAction<"light-bg" | "dark-bg">>;
-// }
-// export const ThemeColor = createContext<themeType>({} as themeType);
+interface themeType {
+  theme: "light-bg" | "dark-bg";
+  setTheme?: Dispatch<SetStateAction<"light-bg" | "dark-bg">>;
+}
+export const ThemeColor = createContext<themeType>({} as themeType);
 
 export default function RootLayout({
   children,
@@ -35,13 +35,13 @@ export default function RootLayout({
     localStorage.currentTheme === "light" ? "light-bg" : "dark-bg"
   );
   const [showMenu, setShowMenu] = useState<boolean>(
-    window.innerWidth > 640 ? true : false
+    window.innerWidth > 860 ? true : false
   );
   const [isToggled, setIsToggled] = useState<boolean>(
     localStorage.currentTheme === "light" ? false : true
   );
   const [showDescrip, setshowDescrip] = useState<boolean>(
-    window.innerWidth < 640 ? true : false
+    window.innerWidth < 860 ? true : false
   );
 
   useEffect(() => {
@@ -57,8 +57,8 @@ export default function RootLayout({
     }
 
     window.addEventListener("resize", () => {
-      window.innerWidth > 640 ? setShowMenu(true) : setShowMenu(false);
-      window.innerWidth < 640 ? setshowDescrip(true) : setshowDescrip(false);
+      window.innerWidth > 860 ? setShowMenu(true) : setShowMenu(false);
+      window.innerWidth < 860 ? setshowDescrip(true) : setshowDescrip(false);
     });
   }, []);
 
@@ -67,7 +67,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header
           className={clsx(
-            " relative flex justify-between  my-1 mx-4 py-6  sm:mx-[60px] sm:my-2",
+            " relative flex justify-between h-[8vh] my-1 mx-7 py-6   sm:my-1 xl:mx-[80px]",
             {
               " text-[--light-primary-color]": theme === "light-bg",
               " text-[--dark-primary-color]": theme === "dark-bg",
@@ -88,7 +88,7 @@ export default function RootLayout({
                 viewBox="0 -0.5 25 25"
                 width={60}
                 height={60}
-                className={clsx(" cursor-pointer -mt-4", {
+                className={clsx(" cursor-pointer -mt-4 w-10 sm:w-16 ", {
                   " fill-[--light-primary-color]": theme === "light-bg",
                   " fill-[--dark-primary-color]": theme === "dark-bg",
                 })}
@@ -111,17 +111,17 @@ export default function RootLayout({
             {showMenu && (
               <ul
                 className={clsx(
-                  `flex  font-medium text-[16px] mt-1  gap-[32px] ${bebasNeue.className}`,
+                  `flex  font-medium text-[16px] mt-1 h-6   gap-[32px] ${bebasNeue.className}`,
                   {
-                    "flex-col absolute top-[-15px] right-[-60px] bg-[#fff]   text-[#0a0a0a] fill-[#0a0a0a] w-40 h-auto pb-20 px-3 uppercase":
-                      window.innerWidth < 640,
+                    "flex-col absolute top-[-15px] right-[-60px] bg-[#fff]   text-[#0a0a0a] fill-[#0a0a0a] w-40 h-[450px] pb-20 px-3 uppercase":
+                      window.innerWidth < 860,
                     "!bg-[#0a0a0a] text-[#c7c7c7] fill-[#c7c7c7] ":
-                      theme === "light-bg" && window.innerWidth < 640,
+                      theme === "light-bg" && window.innerWidth < 860,
                   }
                 )}
               >
                 {/* <----------------- CANCEL ICON ------------------> */}
-                {window.innerWidth < 640 && (
+                {window.innerWidth < 860 && (
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function RootLayout({
                 )}
                 <li
                   className={
-                    window.innerWidth < 640 ? "nav-text" : "nav-text-full"
+                    window.innerWidth < 860 ? "nav-text" : "nav-text-full"
                   }
                 >
                   <Link
@@ -154,7 +154,7 @@ export default function RootLayout({
                 </li>
                 <li
                   className={
-                    window.innerWidth < 640 ? "nav-text" : "nav-text-full"
+                    window.innerWidth < 860 ? "nav-text" : "nav-text-full"
                   }
                 >
                   <Link
@@ -166,7 +166,7 @@ export default function RootLayout({
                 </li>
                 <li
                   className={
-                    window.innerWidth < 640 ? "nav-text" : "nav-text-full"
+                    window.innerWidth < 860 ? "nav-text" : "nav-text-full"
                   }
                 >
                   <Link
@@ -178,7 +178,7 @@ export default function RootLayout({
                 </li>
                 <li
                   className={
-                    window.innerWidth < 640 ? "nav-text" : "nav-text-full"
+                    window.innerWidth < 860 ? "nav-text" : "nav-text-full"
                   }
                 >
                   <Link
@@ -192,11 +192,10 @@ export default function RootLayout({
                 {/* <------------------- THEME TOGGLE ------------------> */}
                 <li>
                   <div
-                    className={
-                      window.innerWidth > 640
-                        ? ` flex flex-col-reverse gap-1 w-16 h-auto`
-                        : "flex justify-between"
-                    }
+                    className = {clsx("flex   h-auto justify-between", {
+                       'flex flex-col-reverse  gap-1 w-16 h-12 ': window.innerWidth > 840,
+                    })}
+                    
                     onMouseEnter={() => {
                       window.innerWidth > 640 ? setshowDescrip(true) : "";
                     }}
@@ -371,9 +370,9 @@ export default function RootLayout({
             )}
           </div>
         </header>
-        {/* <ThemeColor.Provider value={{ theme }}> */}
+        <ThemeColor.Provider value={{ theme }}>
         {children}
-        {/* </ThemeColor.Provider> */}
+        </ThemeColor.Provider>
       </body>
     </html>
   );

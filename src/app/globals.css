@@ -9,7 +9,7 @@
   --light-secondary-color: #000;
   --dark-secondary-color: #fff;
 
-  --light-background: #fff;
+  --light-background: #F1F4FB;
   --dark-background: #0a0a0a;
 
   --foreground-color: #ffa500;
@@ -51,6 +51,9 @@
 }
 .nav-text:hover, .nav-text-full:hover {
   border-bottom: 3px solid var(--foreground-color)
+}
+.nav-text-full:hover {
+  padding-bottom: 0;
 }
 
 /*  toggle  styles*/
@@ -121,15 +124,45 @@ input:checked + label svg.moon {
 .btn {
   background-color: var(--foreground-color);
   height: 54px;
-  padding: 20px 6px 20px 24px;
+  /* padding: 20px 6px 20px 24px; */
   border-radius: 100px;
-  font-size: 16px;
   font-weight: 700;
   border-radius: 100px;
   text-transform: uppercase;
 }
-
-/* @media (prefers-color-scheme: dark) {
+.icon:hover {
+  background: #150303;
+  -webkit-animation: spin 2s;
+  -moz-animation: spin 2s;
+  -o-animation: spin 2s;
+  animation: spin 2s;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* 
+@media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #c7c7c7;
     --secondary-color: #fff;
@@ -137,7 +170,7 @@ input:checked + label svg.moon {
   }
 } */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -145,5 +178,5 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
