@@ -17,11 +17,11 @@ import { usePathname } from "next/navigation";
 export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-interface themeType {
-  theme: "light-bg" | "dark-bg";
-  setTheme?: Dispatch<SetStateAction<"light-bg" | "dark-bg">>;
-}
-export const ThemeColor = createContext<themeType>({} as themeType);
+// interface themeType {
+//   theme: "light-bg" | "dark-bg";
+//   setTheme?: Dispatch<SetStateAction<"light-bg" | "dark-bg">>;
+// }
+// export const ThemeColor = createContext<themeType>({} as themeType);
 
 export default function RootLayout({
   children,
@@ -31,9 +31,11 @@ export default function RootLayout({
   const pathname = usePathname();
 
   // state
-  const [theme, setTheme] = useState<"light-bg" | "dark-bg">(
-    localStorage.currentTheme === "light" ? "light-bg" : "dark-bg"
-  );
+  // const [theme, setTheme] = useState<"light-bg" | "dark-bg">(
+  //   localStorage.currentTheme === "light" ? "light-bg" : "dark-bg"
+  // );
+  // flex  font-medium text-[16px] mt-1 h-6 gap-[32px] lg:flex-col lg:absolute lg:top-0 lg:right-[-16px] lg:bg-[#fff] lg:z-10 lg:text-[#0a0a0a] lg:fill-[#0a0a0a] lg:w-40 lg:h-[450px] lg:pb-20 lg:px-3 lg:uppercase lg:sm:right-[-28px] lg:xl:right-0 || dark:lg:bg-[#0a0a0a] dark:lg:text-[#c7c7c7] dark:lg:fill-[#c7c7c7] 
+  const [theme, setTheme] = useState<"dark" | ''>('')
   const [showMenu, setShowMenu] = useState<boolean>(
     window.innerWidth > 860 ? true : false
   );
@@ -49,10 +51,10 @@ export default function RootLayout({
       ? localStorage.setItem("currentTheme", "light")
       : "";
     if (localStorage.currentTheme === "dark") {
-      setTheme("dark-bg");
+      setTheme("dark");
       setIsToggled(true);
     } else {
-      setTheme("light-bg");
+      setTheme("");
       setIsToggled(false);
     }
 
@@ -63,21 +65,16 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en" className={`${theme}`}>
-      <body className={inter.className}>
+    <html lang="en" className={`${theme }`}> 
+      <body className={` ${inter.className}`}>
         {/*FIX ME change bg of na to smth transparent */}
-        <nav className={`fixed top-0 w-[100%]  z-10 ${theme}` }> 
+        <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] z-10 ${theme} ` }> 
           <header
-            className={clsx(
-              " relative flex justify-between h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px]",
-              {
-                " text-[--light-primary-color]": theme === "light-bg",
-                " text-[--dark-primary-color]": theme === "dark-bg",
-              }
-            )}
+            className={
+              " relative flex justify-between h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px] text-[--light-primary-color] dark:text-[--dark-primary-color]"}
           >
             <h2
-              className={` text-2xl font-medium sm:text-[32px]  ${bebasNeue.className} `}
+              className={` text-2xl font-medium sm:text-[32px] heading-txt ${bebasNeue.className} `}
             >
               OSITA JERRY
             </h2>
@@ -90,10 +87,7 @@ export default function RootLayout({
                   viewBox="0 -0.5 25 25"
                   width={60}
                   height={60}
-                  className={clsx(" cursor-pointer -mt-4 w-10 sm:w-16 ", {
-                    " fill-[--light-primary-color]": theme === "light-bg",
-                    " fill-[--dark-primary-color]": theme === "dark-bg",
-                  })}
+                  className={" cursor-pointer -mt-4 w-10 sm:w-16 fill-[--light-primary-color] dark:fill-[--dark-primary-color]"}
                   onClick={() => setShowMenu(!showMenu)}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -112,15 +106,11 @@ export default function RootLayout({
 
               {showMenu && (
                 <ul
-                  className={clsx(
-                    `flex  font-medium text-[16px] mt-1 h-6   gap-[32px] ${bebasNeue.className}`,
-                    {
-                      "flex-col absolute top-0 right-[-16px] bg-[#fff] z-10 text-[#0a0a0a] fill-[#0a0a0a] w-40 h-[450px] pb-20 px-3 uppercase sm:right-[-28px] xl:right-0":
-                        window.innerWidth < 860,
-                      "!bg-[#0a0a0a] text-[#c7c7c7] fill-[#c7c7c7] ":
-                        theme === "light-bg" && window.innerWidth < 860,
+                  className={
+                    clsx(` ${bebasNeue.className} h-[450px] w-40 pb-20 px-3 flex flex-col font-medium text-[16px] mt-1 z-10 gap-[32px] text-[#c7c7c7] dark:text-[#0a0a0a] bg-[#0a0a0a] dark:bg-[#fff] absolute right-[-16px] top-0 fill-[#0a0a0a] sm:right-[-28px] lg:flex-row lg:static lg:bg-[inherit] lg:h-6 lg:w-auto lg:pb-0 lg:px-0 dark:lg:bg-[inherit] dark:lg:text-[#c7c7c7] lg:text-[#0a0a0a]`, {
+                      ' dark:lg:text-[#c7c7c7] dark:lg:fill-[#c7c7c7] ': theme !== 'dark'
+                    })
                     }
-                  )}
                 >
                   {/* <----------------- CANCEL ICON ------------------> */}
                   {window.innerWidth < 860 && (
@@ -224,12 +214,12 @@ export default function RootLayout({
                           viewBox="0 0 49.739 49.739"
                           xmlSpace="preserve"
                           onClick={() => {
-                            if (theme === "light-bg") {
-                              setTheme("dark-bg");
+                            if (theme === "") {
+                              setTheme("dark");
                               setIsToggled(true);
                               localStorage.setItem("currentTheme", "dark");
                             } else {
-                              setTheme("light-bg");
+                              setTheme("");
                               setIsToggled(false);
                               localStorage.setItem("currentTheme", "light");
                             }
@@ -255,12 +245,12 @@ export default function RootLayout({
                           viewBox="0 0 496 496"
                           xmlSpace="preserve"
                           onClick={() => {
-                            if (theme === "light-bg") {
-                              setTheme("dark-bg");
+                            if (theme === "") {
+                              setTheme("dark");
                               setIsToggled(true);
                               localStorage.setItem("currentTheme", "dark");
                             } else {
-                              setTheme("light-bg");
+                              setTheme("");
                               setIsToggled(false);
                               localStorage.setItem("currentTheme", "light");
                             }
@@ -374,9 +364,9 @@ export default function RootLayout({
           </header>
 
         </nav>
-        <ThemeColor.Provider value={{ theme }}>
+        {/* <ThemeColor.Provider value={{ theme }}> */}
         {children}
-        </ThemeColor.Provider>
+        {/* </ThemeColor.Provider> */}
       </body>
     </html>
   );
