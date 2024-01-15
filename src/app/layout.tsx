@@ -71,7 +71,7 @@ export default function RootLayout({
         <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] z-10 ${theme} ` }> 
           <header
             className={
-              " relative flex justify-between h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px] text-[--light-primary-color] dark:text-[--dark-primary-color]"}
+              " relative flex justify-between h-[8vh] sm:h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px] text-[--light-primary-color] dark:text-[--dark-primary-color]"}
           >
             <h2
               className={` text-2xl font-medium sm:text-[32px] heading-txt ${bebasNeue.className} `}
@@ -121,7 +121,7 @@ export default function RootLayout({
                         height="30"
                         viewBox="0 0 16 16"
                         fill="#fff"
-                        className="-ml-9 mt-10  bg-[orange]"
+                        className="-ml-9 mt-10  bg-[#00FDEE]"
                       >
                         <path
                           d="M9.89324 3.45816L7.51247 5.92536L5.04527 3.54459C4.74253 3.25245 4.26009 3.26105 3.96795 3.56379L3.43889 4.11206C3.14675 4.4148 3.15535 4.89724 3.45809 5.18938L5.92529 7.57015L3.54452 10.0373C3.25238 10.3401 3.26098 10.8225 3.56372 11.1147L4.11199 11.6437C4.41473 11.9359 4.89717 11.9273 5.18931 11.6245L7.57008 9.15733L10.0373 11.5381C10.34 11.8302 10.8225 11.8216 11.1146 11.5189L11.6437 10.9706C11.9358 10.6679 11.9272 10.1854 11.6245 9.8933L9.15726 7.51253L11.538 5.04534C11.8302 4.7426 11.8216 4.26016 11.5188 3.96802L10.9706 3.43896C10.6678 3.14682 10.1854 3.15542 9.89324 3.45816Z"

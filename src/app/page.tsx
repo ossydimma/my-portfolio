@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <main >
-      <div className=" mx-[30px] mb-8  mt-[12vh] h-auto flex flex-col justify-between gap-10  items-center py-10 sm:gap-16 sm:mx-[50px] md:mx-[60px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-5 xl:mx-[108px]">
+      <div className=" mx-[5%] mb-8  mt-[12vh] h-auto flex flex-col justify-between gap-10  items-center py-10 sm:gap-16 sm:mx-[50px] md:mx-[60px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-5 xl:mx-[108px]">
         {/* <----------------------- LEFT SECTION -----------------------------> */}
         <section className=" w-[90%]   lg:w-[340px] xl:w-[544px] ">
 
