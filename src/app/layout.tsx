@@ -244,7 +244,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 496 496"
                           xmlSpace="preserve"
-                          onClick={() => {
+                          onChange={() => {
                             if (theme === "") {
                               setTheme("dark");
                               setIsToggled(true);

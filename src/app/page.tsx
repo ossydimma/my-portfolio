@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-// import Mypic from "@/app/assets/ositapp.jpg";
+import Mypic from "@/app/assets/osita-removebg-preview.png";
 import pic from "@/app/assets/pic.png"
 import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
 import { useContext } from "react";
 // import { ThemeColor } from "./layout";
 import clsx from "clsx";
 import { Works } from "./components/Works";
+import { About } from "./components/About";
 // import { bebasNeue } from './layout';
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -105,6 +106,7 @@ export default function Home() {
 
       </div>
       <Works />
+      <About />
     </main>
   );
 }
