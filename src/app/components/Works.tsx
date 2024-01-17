@@ -96,6 +96,7 @@ export const Works = () => {
           {data.map((obj) => (
             <section
               className={`   pb-[120px]  flex flex-col  items-center justify-center  gap-14 lg:flex-row xl:gap-[120px] `}
+              key={obj.id}
             >
               <div
                 className={`w-[98%] px-[2%] py-12   rounded-xl bg-[#1A1A1A] flex justify-center items-center sm:w-[96%] sm:px-[7%] sm:py-16 lg:px-6  lg:py-20 lg:w-auto`}
