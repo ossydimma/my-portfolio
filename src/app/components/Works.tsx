@@ -10,19 +10,19 @@ import toDoImg from "https://i.postimg.cc/sD6QLyMh/new-To-Do-img.png";
 // import data from '../projects.json'
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
-const manrope = Manrope({ subsets: ["latin"], weight: "700" });
+export const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
-interface dataType {
-  id: string;
-  image: string;
-  name: string;
-  descri: string;
-  stack: string;
-  year: string;
-  role: string;
-  codeLink: string;
-  webLink: string;
-}
+// interface dataType {
+//   id: string;
+//   image: string;
+//   name: string;
+//   descri: string;
+//   stack: string;
+//   year: string;
+//   role: string;
+//   codeLink: string;
+//   webLink: string;
+// }
 
 export const Works = () => {
   const data = [

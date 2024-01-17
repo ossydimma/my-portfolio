@@ -14,6 +14,7 @@
 
   --foreground-color: #ffa500;
   --Gradient-Heading : linear-gradient(90deg, #00FDEE -2.06%, #8F00FF 100%);
+  --rev-gradient-Heading: linear-gradient(90deg, #8F00FF -2.06%, #00FDEE  100%);
 }
 .text-shadow {
   text-shadow: 2px 1px 2px white;
@@ -87,7 +88,6 @@ label:after {
   transition: 0.3s;
 }
 #darkmode-toggle {
-  
   width: 0;
   height: 0;
   visibility: hidden;
@@ -130,6 +130,12 @@ input:checked + label svg.moon {
 
 .heading-txt {
   background: var(--Gradient-Heading);
+  background-clip:  text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rev-heading-txt {
+  background: var(--rev-gradient-Heading);
   background-clip:  text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
