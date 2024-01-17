@@ -1,8 +1,7 @@
-// import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
-// import {  } from "./Works";
+
 import { SpaceGrotesk, manrope, bebasNeue} from "../page";
 
-// const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" }); 
+
  export const About = ()=> {
     return (
         <>
