@@ -35,9 +35,12 @@ export default function RootLayout({
     window.innerWidth > 860 ? true : false
   );
   const [isToggled, setIsToggled] = useState<boolean>(
-    localStorage.currentTheme === "light" ? false : true
+    localStorage.currentTheme === "" ? false : true
   );
   const [showDescrip, setshowDescrip] = useState<boolean>(
+    window.innerWidth < 860 ? true : false
+  );
+  const [showCancel, setshowCancel] = useState<boolean>(
     window.innerWidth < 860 ? true : false
   );
 
@@ -56,6 +59,7 @@ export default function RootLayout({
     window.addEventListener("resize", () => {
       window.innerWidth > 860 ? setShowMenu(true) : setShowMenu(false);
       window.innerWidth < 860 ? setshowDescrip(true) : setshowDescrip(false);
+      window.innerWidth < 860 ? setshowCancel(true) : setshowCancel(false);
     });
   }, []);
 
@@ -108,7 +112,7 @@ export default function RootLayout({
                     }
                 >
                   {/* <----------------- CANCEL ICON ------------------> */}
-                  {window.innerWidth < 860 && (
+                  {showCancel && (
                     <li>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
