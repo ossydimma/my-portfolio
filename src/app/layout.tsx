@@ -29,7 +29,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
   const [theme, setTheme] = useState<"dark" | ''>('')
   const [showMenu, setShowMenu] = useState<boolean>(
     window.innerWidth > 860 ? true : false
@@ -90,11 +89,11 @@ export default function RootLayout({
                   onClick={() => setShowMenu(!showMenu)}
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
@@ -206,7 +205,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 49.739 49.739"
                           xmlSpace="preserve"
-                          onClick={() => {
+                          onChange={() => {
                             if (theme === "") {
                               setTheme("dark");
                               setIsToggled(true);
