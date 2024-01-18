@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import Mypic from "@/app/assets/osita-removebg-preview.png";
+// import Mypic from "@/app/assets/osita-removebg-preview.png";
 import pic from "@/app/assets/pic.png"
 import { Manrope, Space_Grotesk } from "next/font/google";
-import { useContext } from "react";
+// import { useContext } from "react";
 // import { ThemeColor } from "./layout";
-import clsx from "clsx";
+// import clsx from "clsx";
 import { Works } from "./components/Works";
 import { About } from "./components/About";
 // import { bebasNeue } from './layout';

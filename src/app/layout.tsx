@@ -14,7 +14,7 @@ import {
 } from "react";
 import { usePathname } from "next/navigation";
 
-export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
+const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 // interface themeType {
