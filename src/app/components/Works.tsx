@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import { useContext, useEffect, useState } from "react";
 // import { ThemeColor } from "../layout";
-// import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
-import {manrope, bebasNeue,SpaceGrotesk} from "@/app/page"
+import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
 import Image from "next/image";
 import SneakerImg from "@/app/assets/sneaker_img.jpg";
 import calcuImg from "@/app/assets/calculator_img.png";
@@ -10,9 +9,9 @@ import spaceImg from "@/app/assets/space_img.png";
 import toDoImg from "https://i.postimg.cc/sD6QLyMh/new-To-Do-img.png";
 // import data from '../projects.json'
 
-// export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
-// export const manrope = Manrope({ subsets: ["latin"], weight: "700" });
-// export const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
+export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
+export const manrope = Manrope({ subsets: ["latin"], weight: "700" });
+export const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 // interface dataType {
 //   id: string;
 //   image: string;

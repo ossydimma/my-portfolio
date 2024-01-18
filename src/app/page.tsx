@@ -13,6 +13,7 @@ import { About } from "./components/About";
 export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 export const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 export const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" }); //will be used later
+
 export default function Home() {
   // const { theme } = useContext(ThemeColor);
 
