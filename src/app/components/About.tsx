@@ -2,9 +2,9 @@ import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
 
 
 
-export const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
-export const manrope = Manrope({ subsets: ["latin"], weight: "700" });
-export const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
+const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"], weight: "700" });
+const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 
 
  export const About = ()=> {
