@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Mypic from "@/app/assets/osita-removebg-preview.png";
 import pic from "@/app/assets/pic.png"
-import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import { useContext } from "react";
 // import { ThemeColor } from "./layout";
 import clsx from "clsx";
