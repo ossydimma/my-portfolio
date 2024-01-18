@@ -48,22 +48,13 @@
   background: var(--dark-background);
 }
 
-.nav-text {
-  border-bottom: 2px solid #c7c7c7;
-  padding-bottom: 5px;
-}
-.nav-text-active {
-  color: #8F00FF;
-  padding-bottom: 5px;
-}
 
-.nav-text:hover, .nav-text-full:hover {
-  border-bottom: 2px solid #8F00FE;
-  color: #00FDEE
-}
-.nav-text-full:hover {
-  padding-bottom: 0;
-}
+/* .nav-text-active {
+  color: #8F00FF;
+} */
+
+
+
 
 /*  toggle  styles*/
 label {

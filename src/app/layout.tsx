@@ -30,11 +30,6 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
-  // state
-  // const [theme, setTheme] = useState<"light-bg" | "dark-bg">(
-  //   localStorage.currentTheme === "light" ? "light-bg" : "dark-bg"
-  // );
-  // flex  font-medium text-[16px] mt-1 h-6 gap-[32px] lg:flex-col lg:absolute lg:top-0 lg:right-[-16px] lg:bg-[#fff] lg:z-10 lg:text-[#0a0a0a] lg:fill-[#0a0a0a] lg:w-40 lg:h-[450px] lg:pb-20 lg:px-3 lg:uppercase lg:sm:right-[-28px] lg:xl:right-0 || dark:lg:bg-[#0a0a0a] dark:lg:text-[#c7c7c7] dark:lg:fill-[#c7c7c7] 
   const [theme, setTheme] = useState<"dark" | ''>('')
   const [showMenu, setShowMenu] = useState<boolean>(
     window.innerWidth > 860 ? true : false
@@ -132,50 +127,42 @@ export default function RootLayout({
                     </li>
                   )}
                   <li
-                    className={
-                      window.innerWidth < 860 ? "nav-text" : "nav-text-full"
-                    }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2 ` }
                   >
                     <Link
                       href="/"
-                      className={pathname === "/" ? "nav-text-active" : ""}
+                      className={pathname === "/" ? "text-[#8F00FF] " : ""}
                     >
                       {" "}
                       Home{" "}
                     </Link>
                   </li>
                   <li
-                    className={
-                      window.innerWidth < 860 ? "nav-text" : "nav-text-full"
-                    }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
                   >
                     <Link
                       href="/about"
-                      className={pathname === "/about" ? "nav-text-active" : ""}
+                      className={pathname === "/about" ? "text-[#8F00FF]" : ""}
                     >
                       About{" "}
                     </Link>
                   </li>
                   <li
-                    className={
-                      window.innerWidth < 860 ? "nav-text" : "nav-text-full"
-                    }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
                   >
                     <Link
                       href="/work"
-                      className={pathname === "/work" ? "nav-text-active" : ""}
+                      className={pathname === "/work" ? "text-[#8F00FF]" : ""}
                     >
                       Works{" "}
                     </Link>
                   </li>
                   <li
-                    className={
-                      window.innerWidth < 860 ? "nav-text" : "nav-text-full"
-                    }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
                   >
                     <Link
                       href="/contact"
-                      className={pathname === "/contact" ? "nav-text-active" : ""}
+                      className={pathname === "/contact" ? "text-[#8F00FF]" : ""}
                     >
                       Contact{" "}
                     </Link>
@@ -184,15 +171,17 @@ export default function RootLayout({
                   {/* <------------------- THEME TOGGLE ------------------> */}
                   <li>
                     <div
-                      className = {clsx("flex   h-auto justify-between", {
-                        'flex flex-col-reverse  gap-1 w-16 h-12 ': window.innerWidth > 840,
-                      })}
+                      className = {"flex gap-0 w-auto  h-auto justify-between lg:gap-1 lg:w-16 lg:h-12 lg:flex-col-reverse"}
                       
                       onMouseEnter={() => {
-                        window.innerWidth > 640 ? setshowDescrip(true) : "";
+                        if (typeof window !== 'undefined') {
+                          window.innerWidth > 640 ? setshowDescrip(true) : "";
+                        }
                       }}
                       onMouseLeave={() => {
-                        window.innerWidth > 640 ? setshowDescrip(false) : "";
+                        if (typeof window !== 'undefined') {
+                          window.innerWidth > 640 ? setshowDescrip(false) : "";
+                        }
                       }}
                     >
                       {showDescrip && (
