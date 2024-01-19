@@ -4,14 +4,7 @@ import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import clsx from "clsx";
-import {
-  Dispatch,
-  SetStateAction,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { useEffect, useState} from "react";
 import { usePathname } from "next/navigation";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -174,7 +167,7 @@ export default function RootLayout({
                   {/* <------------------- THEME TOGGLE ------------------> */}
                   <li>
                     <div
-                      className = {"flex gap-0 w-auto  h-auto justify-between lg:gap-1 lg:w-16 lg:h-12 lg:flex-col-reverse"}
+                      className = {"flex gap-0 w-auto  h-auto justify-between lg:gap-1 lg:w-16 lg:h-[54px] lg:flex-col-reverse"}
                       
                       onMouseEnter={() => {
                         if (typeof window !== 'undefined') {
@@ -194,6 +187,17 @@ export default function RootLayout({
                         type="checkbox"
                         checked={isToggled}
                         id="darkmode-toggle"
+                        onChange={() => {
+                          if (theme === "") {
+                            setTheme("dark");
+                            setIsToggled(true);
+                            localStorage.setItem("currentTheme", "dark");
+                          } else {
+                            setTheme("");
+                            setIsToggled(false);
+                            localStorage.setItem("currentTheme", "light");
+                          }
+                        }}
                       />
                       <label htmlFor="darkmode-toggle">
                         <svg
@@ -205,17 +209,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 49.739 49.739"
                           xmlSpace="preserve"
-                          onChange={() => {
-                            if (theme === "") {
-                              setTheme("dark");
-                              setIsToggled(true);
-                              localStorage.setItem("currentTheme", "dark");
-                            } else {
-                              setTheme("");
-                              setIsToggled(false);
-                              localStorage.setItem("currentTheme", "light");
-                            }
-                          }}
+                          
                         >
                           <path
                             d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
@@ -236,17 +230,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 496 496"
                           xmlSpace="preserve"
-                          onChange={() => {
-                            if (theme === "") {
-                              setTheme("dark");
-                              setIsToggled(true);
-                              localStorage.setItem("currentTheme", "dark");
-                            } else {
-                              setTheme("");
-                              setIsToggled(false);
-                              localStorage.setItem("currentTheme", "light");
-                            }
-                          }}
+                          
                         >
                           <rect
                             x="152.994"

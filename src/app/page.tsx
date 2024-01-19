@@ -4,6 +4,7 @@ import pic from "@/app/assets/pic.png"
 import { Manrope, Space_Grotesk } from "next/font/google";
 import { Works } from "./components/Works";
 import { About } from "./components/About";
+import { Connect } from "./components/Connect";
 
 // const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"], weight: "700" });
@@ -38,12 +39,12 @@ export default function Home() {
           </div>
 
           {/* <-----------------------  CONTACT ME -----------------------------> */}
-          <div className=" w-auto h-auto flex justify-center gap-2 -4 mx-0 sm:justify-start sm:gap  lg:w-[80%] ">
+          <div className=" w-auto h-auto flex justify-center gap-2 -4 mx-0 sm:justify-start sm:gap  lg:w-[80%] lg:gap-4 ">
             <button
-              className={`btn text-[10px] px-4 dark:text-white pr-1 pl-4 flex items-center gap-3 sm:text-[16px]  sm:px-5 sm:pr-1.5 sm:pl-6 ${SpaceGrotesk.className}}`}
+              className={` uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-14 rounded-tr-none   rounded-[200px] text-[10px] text-white pr-1 pl-4 flex items-center gap-3 sm:text-[16px]  sm:px-5 sm:pr-6 sm:pl-4 ${SpaceGrotesk.className}}`}
             >
-              contact me{" "}
-              <div className=" w-2 h-2 mr-1.5 bg-[#222] rounded-full dark:bg-[#f1f1f1] md:w-4 md:h-4 md:mr-3 "></div>
+              <div className=" w-3 h-3 bg-black border-2 border-white rounded-full  md:w-4 md:h-4 "></div>
+              <span className=" text-shadow  ">contact me </span>
             </button>
             <div className=" icon bg-[#222] h-[54px] w-[54px] cursor-pointer rounded-full flex justify-center items-center ">
               <a href="https://www.linkedin.com/in/osita-jerry-a87102254/">
@@ -103,6 +104,7 @@ export default function Home() {
       </div>
       <Works />
       <About />
+      <Connect />
     </main>
   );
 }

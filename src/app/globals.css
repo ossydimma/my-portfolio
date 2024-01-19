@@ -17,6 +17,9 @@
   --rev-gradient-Heading: linear-gradient(90deg, #8F00FF -2.06%, #00FDEE  100%);
 }
 .text-shadow {
+  text-shadow: 2px 1px 2px black;
+}
+.text-shadow-dark {
   text-shadow: 2px 1px 2px white;
 }
 .para-full-screen {
@@ -59,10 +62,10 @@
 /*  toggle  styles*/
 label {
   width: 48px;
-  height: 20px;
+  height: 23px;
   position: relative;
   display: block;
-  background: var(--dark-primary-color);
+  background: #c7c7c7;
   border-radius: 200px;
   cursor: pointer;
   transition: 0.3s;
@@ -72,7 +75,7 @@ label:after {
   width: 16px;
   height: 16px;
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 1.5px;
   background-color: #383333;
   border-radius: 180px;
@@ -97,7 +100,7 @@ input:checked + label + .background {
 label svg {
   position: absolute;
   width: 13px;
-  top: 3.1px;
+  top: 5px;
   z-index: 100;
 }
 label svg.sun {
@@ -116,6 +119,7 @@ input:checked + label svg.sun {
 input:checked + label svg.moon {
   fill: #fff;
 }
+
 
 /* toggle styles end */
 
