@@ -8,22 +8,22 @@ const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 // import Resume from '../data/Resume.pdf'
 export const Connect = () => {
   return (
-    <main className="ml-9 py-10 ">
+    <main className=" mx-4 sm:mx-9 pt-10 ">
       <h1
-        className={` heading-txt  uppercase font-[400] text-[40px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[48px] sm:leading-[58px] md:text-[50px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] ${SpaceGrotesk.className}`}
+        className={` heading-txt  uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] md:text-[50px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] ${SpaceGrotesk.className}`}
       >
         let's connect
       </h1>
 
-      <div className=" flex flex-row-reverse justify-between items-start px-14 mt-20 ">
-        <div className=" w-[40%] text-white flex  ">
-          <div className=" ">
+      <div className=" w-[100%] flex flex-col-reverse gap-[75px]   mt-20 lg:flex-row-reverse  lg-gap-0">
+        <div className=" w-[100%]  text-white flex flex-col-reverse  sm:flex-col  lg:w-[43%] ">
+          <div className="  ">
             <p
-              className={`   font-semibold  uppercase text-[#000] text-xl   md:text-lg    dark:text-white ${SpaceGrotesk.className}`}
+              className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white ${SpaceGrotesk.className}`}
             >
               For more info:
             </p>
-            <section className=" w-[500px] flex flex-col  gap-2  items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none bg-slate-600 ">
+            <section className=" w-[100%] lg:w-[85%]  flex flex-col  gap-2 items-start sm:items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none sm:bg-slate-600 bg-transparent ">
               <a
                 href="mailto:chrisjerry070@gmail.com"
                 className="  w-[290px] flex items-center gap-3 mr-7  py-4 px-7 bg-gradient-to-l from-[#00FDEE] to-black   rounded-tl-none rounded-br-none rounded-[120px]"
@@ -43,7 +43,7 @@ export const Connect = () => {
                   view Resume
                 </span>
               </a>
-              <div className=" flex gap-5 mr-[10px]">
+              <div className=" flex gap-5 mr-0 ml-5 sm:ml-0 sm:mr-[10px]">
                 <div className=" icon bg-[#222] h-[54px] w-[54px] cursor-pointer rounded-full flex justify-center items-center ">
                   <a href="https://www.linkedin.com/in/osita-jerry-a87102254/">
                     <svg
@@ -85,47 +85,52 @@ export const Connect = () => {
                 </div>
               </div>
             </section>
-            <div className="  flex flex-col gap-[85px]">
-              <p
-                className={`w-[500px]  py-4 pl-20 bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#c7c7c7]  ${SpaceGrotesk.className}`}
-              >
-                I am open to remote and onsite full-&nbsp;time, part-time, and
-                contract frontend web development jobs.
-              </p>
-              <p
-                className={`text-right  text-[#000] dark:text-[#c7c7c7] ${SpaceGrotesk.className}`}
-              >
-                Designed and built by{" "}
-                <span className=" text-[#00FDEE] text-xl">Osita</span> with{" "}
-                <span className=" heading-txt text-xl">Love</span> &{" "}
-                <span className=" heading-txt text-xl">Coffee</span>.
-              </p>
-            </div>
           </div>
+          <div className=" w-auto lg:w-[85%] flex flex-col gap-[65px]">
+            <p
+              className={`  py-4 px-0 sm:px-4 lg:px-8 bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#c7c7c7]  ${SpaceGrotesk.className}`}
+            >
+              I am open to remote and onsite full-&nbsp;time, part-time, and
+              contract frontend web development jobs.
+            </p>
+            
+          </div>
+         
         </div>
-        <form className=" w-[50%]  flex flex-col  gap-6 ">
+        <form className=" w-[100%]  flex flex-col  gap-6 lg:w-[50%] ">
           <input
             type="text"
-            className=" w-[80%] ] p-5 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
+            className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
             placeholder="NAME"
           />
           <input
             type="email"
-            className=" w-[80%] border-[#222] p-5 dark:border-[#c7c7c7] border-[3px] bg-transparent outline-none dark:text-gray-200"
+            className="  w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] dark:border-[#c7c7c7] border-[3px] bg-transparent outline-none dark:text-gray-200"
             placeholder="EMAIL"
           />
           <textarea
             placeholder="MESSAGE"
-            className=" w-[80%] h-40 p-4 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
+            className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 h-40 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
           ></textarea>
           <button
             type="submit"
-            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-r from-[#00FDEE] to-black p-4 pl-10 rounded-tl-none   rounded-[200px] text-[10px] text-white  flex items-center gap-3 sm:text-[16px]  sm:w-[150px] ${SpaceGrotesk.className}}`}
+            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-4 pl-10 rounded-tl-none   rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] ${SpaceGrotesk.className}}`}
           >
             SUBMIT
           </button>
         </form>
       </div>
+     
+        <p
+          className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] ${SpaceGrotesk.className}`}
+        >
+          © 2024 Osita jerry  Designed and built by{" "}
+          <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
+          <span className=" heading-txt text-lg">Love</span> &{" "}
+          <span className=" heading-txt text-lg">Coffee</span>.
+        </p>
+
+      
     </main>
   );
 };
