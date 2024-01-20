@@ -28,7 +28,7 @@ export const Hero = () => {
           </div>
 
           {/* <-----------------------  CONTACT ME -----------------------------> */}
-          <div className=" w-auto h-auto flex  flex-row-reverse justify-center gap-1 -4 mx-0 sm:justify-end sm:gap  lg:w-[80%] sm:gap-3 ">
+          <div className=" w-auto h-auto flex  flex-row-reverse justify-center gap-2 -4 mx-0 sm:justify-end sm:gap  lg:w-[80%] sm:gap-3 ">
             <a
               href="/Resume.pdf"
               download

@@ -8,9 +8,9 @@ export const Connect = () => {
         let&apos;s connect
       </h1>
 
-      <div className=" w-[100%] flex flex-col-reverse gap-[75px]   mt-20 lg:flex-row-reverse  lg-gap-0">
-        <div className=" w-[100%]  text-white flex flex-col-reverse  sm:flex-col  lg:w-[43%] ">
-          <div className="  ">
+      <div className=" w-[100%] flex flex-col-reverse gap-[50px]   mt-20 lg:flex-row-reverse  lg-gap-0">
+        <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0 sm:flex-col  lg:w-[43%] ">
+          <div className=" mx-auto ">
             <p
               className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white `}
             >
@@ -79,15 +79,15 @@ export const Connect = () => {
               </div>
             </section>
           </div>
-          <div className=" w-auto lg:w-[85%] flex flex-col gap-[65px]">
-            <p
-              className={`  py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
-            >
-              I am open to remote and onsite full-&nbsp;time, part-time, and
-              contract frontend web development jobs.
-            </p>
+          
+          <p
+            className={`  py-4 px-0  lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black text-xl tracking-wide   text-center text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
+          >
+            I am open to remote and onsite full-&nbsp;time, part-time, and
+            contract frontend web development jobs.
+          </p>
             
-          </div>
+         
          
         </div>
         <form className=" w-[100%]  flex flex-col  gap-6 lg:w-[50%] ">
