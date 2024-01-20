@@ -15,26 +15,26 @@ export const Connect = () => {
         let's connect
       </h1>
 
-      <div className=" flex flex-row-reverse justify-between  px-14 mt-20 ">
-        <div className=" w-[40%] text-white ">
+      <div className=" flex flex-row-reverse justify-between items-center px-14 mt-20 ">
+        <div className=" w-[40%] text-white flex flex-col-reverse ">
           <p
-            className={`   text-[#222] text-lg tracking-wide  py-5 md:leading-6  md:text-2xl  dark:text-[#c7c7c7]  ${SpaceGrotesk.className}`}
+            className={`w-[500px]  py-4 pl-20 bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#c7c7c7]  ${SpaceGrotesk.className}`}
           >
-            I am open to remote and onsite full-time, part-time, and contract
+            I am open to remote and onsite full-&nbsp;time, part-time, and contract
             frontend web development jobs.
           </p>
          
-          <p
-            className={`   font-semibold  uppercase text-[#000] text-xl   md:text-lg    dark:text-white ${SpaceGrotesk.className}`}
-          >
-            For more info:
-          </p>
 
-          <div className=" flex justify-between">
-            <section className=" w-[500px] flex flex-col  items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-br-none bg-slate-600 ">
+          <div className=" ">
+            <p
+              className={`   font-semibold  uppercase text-[#000] text-xl   md:text-lg    dark:text-white ${SpaceGrotesk.className}`}
+            >
+              For more info:
+            </p>
+            <section className=" w-[500px] flex flex-col  gap-2  items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none bg-slate-600 ">
               <a
                 href="mailto:chrisjerry070@gmail.com"
-                className="  w-[290px] flex items-center gap-3 mr-7  bg-gradient-to-l from-[#00FDEE] to-black   py-4 px-7 rounded-tl-none rounded-br-none rounded-[120px]"
+                className="  w-[290px] flex items-center gap-3 mr-7  py-4 px-7 bg-gradient-to-l from-[#00FDEE] to-black   rounded-tl-none rounded-br-none rounded-[120px]"
               >
                 <div className=" w-3 h-3 bg-black border-2   border-white rounded-full  md:w-4 md:h-4 "></div>
                 <span className={`${SpaceGrotesk.className} text-shadow `}>
@@ -99,21 +99,21 @@ export const Connect = () => {
         <form className=" w-[50%]  flex flex-col  gap-6 ">
           <input
             type="text"
-            className=" w-[80%] ] p-5 border-[3px] border-white bg-transparent outline-none dark:text-gray-200"
+            className=" w-[80%] ] p-5 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
             placeholder="NAME"
           />
           <input
             type="email"
-            className=" w-[80%]  p-5 border-[3px] border-white bg-transparent outline-none dark:text-gray-200"
+            className=" w-[80%] border-[#222] p-5 dark:border-[#c7c7c7] border-[3px] bg-transparent outline-none dark:text-gray-200"
             placeholder="EMAIL"
           />
           <textarea
             placeholder="MESSAGE"
-            className=" w-[80%] h-40 p-4 border-[3px] border-white bg-transparent outline-none dark:text-gray-200"
+            className=" w-[80%] h-40 p-4 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
           ></textarea>
           <button
             type="submit"
-            className={` uppercase shadow-2xl font-bold bg-gradient-to-r from-[#00FDEE] to-black p-4 pl-10 rounded-tl-none   rounded-[200px] text-[10px] text-white  flex items-center gap-3 sm:text-[16px]  sm:w-[150px] ${SpaceGrotesk.className}}`}
+            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-r from-[#00FDEE] to-black p-4 pl-10 rounded-tl-none   rounded-[200px] text-[10px] text-white  flex items-center gap-3 sm:text-[16px]  sm:w-[150px] ${SpaceGrotesk.className}}`}
           >
             SUBMIT
           </button>

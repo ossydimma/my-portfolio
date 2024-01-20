@@ -16,7 +16,11 @@ const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 
                 <h3 className={`pb-3 font-semibold  uppercase  text-[#000] text-xl sm:text-2xl  md:text-3xl   xl:text-4xl dark:text-white ${SpaceGrotesk.className}`}>I am Osita Jerry, a&nbsp;front-&nbsp;end&nbsp;developer. <br/> Has a bussiness Background.</h3>
                 <p className={`  text-[#222] text-lg tracking-wide pb-5  md:text-xl md:tracking-wider dark:text-[#c7c7c7]  ${SpaceGrotesk.className}`}>I am front-end developer that love the challenge of solving complex problems and creating beautiful, functional websites. Committed to continuous learning, I aspire to leverage my competencies in this feild to eventually build my career.</p>
-                <a href="/" className={`uppercase text-[#00FDEE]   underline transition-all duration-500 text-xs md:text-lg lg:text-sm  hover:opacity-50 hover:scale-110 dark:text-[#bb88e2] ${manrope.className}`} >more about me</a>
+                <a href="/"               
+                    className={` w-[189px] uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-5 rounded-tl-none   rounded-[200px] text-[10px] text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] sm:text-[16px]   sm:px-6  ${SpaceGrotesk.className}}`}
+                >
+                    more about me
+                </a>
             </div>
         </div>
         </>
