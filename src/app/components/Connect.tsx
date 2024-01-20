@@ -9,8 +9,8 @@ export const Connect = () => {
       </h1>
 
       <div className=" w-[100%] flex flex-col-reverse gap-[50px]   mt-20 lg:flex-row-reverse  lg-gap-0">
-        <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0 sm:flex-col  lg:w-[43%] ">
-          <div className=" mx-auto ">
+        <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0  sm:flex-col  lg:w-[43%] ">
+          <div className="  ">
             <p
               className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white `}
             >
@@ -81,7 +81,7 @@ export const Connect = () => {
           </div>
           
           <p
-            className={`  py-4 px-0  lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black text-xl tracking-wide   text-center text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
+            className={`  py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
           >
             I am open to remote and onsite full-&nbsp;time, part-time, and
             contract frontend web development jobs.
