@@ -12,7 +12,7 @@ export const Connect = () => {
       <h1
         className={` heading-txt  uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] md:text-[50px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] ${SpaceGrotesk.className}`}
       >
-        let's connect
+        let&apos;s connect
       </h1>
 
       <div className=" w-[100%] flex flex-col-reverse gap-[75px]   mt-20 lg:flex-row-reverse  lg-gap-0">

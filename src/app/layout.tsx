@@ -24,10 +24,18 @@ export default function RootLayout({
   const pathname = usePathname();
   const [theme, setTheme] = useState<"dark" | ''>('')
   // if (window !== undefined )
-  const [showMenu, setShowMenu] = useState<boolean>( true );
-  const [isToggled, setIsToggled] = useState<boolean>( true);
-  const [showDescrip, setshowDescrip] = useState<boolean>( false);
-  const [showCancel, setshowCancel] = useState<boolean>( false);
+  const [showMenu, setShowMenu] = useState(
+   typeof window !== 'undefined' ? window.innerWidth > 860 ? true : false : ''
+  );
+  const [isToggled, setIsToggled] = useState(
+    typeof localStorage !== 'undefined' ?  localStorage.currentTheme === "" ? false : true : ''
+  );
+  const [showDescrip, setshowDescrip] = useState(
+  typeof window !== 'undefined' ? window.innerWidth < 860 ? true : false : ''
+  );
+  const [showCancel, setshowCancel] = useState(
+    typeof window !== 'undefined' ?  window.innerWidth < 860 ? true : false : ''
+  );
 
   useEffect(() => {
     localStorage.currentTheme === null
