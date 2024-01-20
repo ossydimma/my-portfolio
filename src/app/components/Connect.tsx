@@ -1,16 +1,9 @@
-import Link from "next/link";
-import { Manrope, Space_Grotesk, Bebas_Neue } from "next/font/google";
 
-const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
-const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
-const manrope = Manrope({ subsets: ["latin"], weight: "700" });
-
-// import Resume from '../data/Resume.pdf'
 export const Connect = () => {
   return (
     <main className=" mx-4 sm:mx-9 pt-10 ">
       <h1
-        className={` heading-txt  uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] md:text-[50px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] ${SpaceGrotesk.className}`}
+        className={` heading-txt  uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
       >
         let&apos;s connect
       </h1>
@@ -19,7 +12,7 @@ export const Connect = () => {
         <div className=" w-[100%]  text-white flex flex-col-reverse  sm:flex-col  lg:w-[43%] ">
           <div className="  ">
             <p
-              className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white ${SpaceGrotesk.className}`}
+              className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white `}
             >
               For more info:
             </p>
@@ -29,21 +22,21 @@ export const Connect = () => {
                 className="  w-[290px] flex items-center gap-3 mr-7  py-4 px-7 bg-gradient-to-l from-[#00FDEE] to-black   rounded-tl-none rounded-br-none rounded-[120px]"
               >
                 <div className=" w-3 h-3 bg-black border-2   border-white rounded-full  md:w-4 md:h-4 "></div>
-                <span className={`${SpaceGrotesk.className} text-shadow `}>
+                <span className={` text-shadow `}>
                   chrisjerry070@gmail.com
                 </span>
               </a>
               <a
                 href="/Resume.pdf"
                 download
-                className=" flex w-[190px]   items-center gap-3  uppercase bg-gradient-to-l from-[#8F00FF] to-black shadow-3xl  py-4 px-7 rounded-tl-none rounded-br-none rounded-[120px]"
+                className=" flex w-[190px]   items-center gap-3  uppercase bg-gradient-to-l from-[#8F00FF] to-black shadow-3xl ml-6 sm:ml-0 py-4 px-7 rounded-tl-none rounded-br-none rounded-[120px]"
               >
                 <div className=" w-3 h-3 bg-black border-2  border-white rounded-full  md:w-4 md:h-4 "></div>
-                <span className={`${SpaceGrotesk.className} text-shadow`}>
+                <span className={` text-shadow`}>
                   view Resume
                 </span>
               </a>
-              <div className=" flex gap-5 mr-0 ml-5 sm:ml-0 sm:mr-[10px]">
+              <div className=" flex gap-5 mr-0 ml-14 sm:ml-0 sm:mr-[10px]">
                 <div className=" icon bg-[#222] h-[54px] w-[54px] cursor-pointer rounded-full flex justify-center items-center ">
                   <a href="https://www.linkedin.com/in/osita-jerry-a87102254/">
                     <svg
@@ -88,7 +81,7 @@ export const Connect = () => {
           </div>
           <div className=" w-auto lg:w-[85%] flex flex-col gap-[65px]">
             <p
-              className={`  py-4 px-0 sm:px-4 lg:px-8 bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#c7c7c7]  ${SpaceGrotesk.className}`}
+              className={`  py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black     text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
             >
               I am open to remote and onsite full-&nbsp;time, part-time, and
               contract frontend web development jobs.
@@ -114,7 +107,7 @@ export const Connect = () => {
           ></textarea>
           <button
             type="submit"
-            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-4 pl-10 rounded-tl-none   rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] ${SpaceGrotesk.className}}`}
+            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-3.5  pl-10 rounded-tl-none  rounded-bl-none  rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] }`}
           >
             SUBMIT
           </button>
@@ -122,7 +115,7 @@ export const Connect = () => {
       </div>
      
         <p
-          className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] ${SpaceGrotesk.className}`}
+          className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
         >
           © 2024 Osita jerry  Designed and built by{" "}
           <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}

@@ -1,20 +1,16 @@
 "use client";
 // import type { Metadata } from 'next'
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import clsx from "clsx";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
+const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 
-// interface themeType {
-//   theme: "light-bg" | "dark-bg";
-//   setTheme?: Dispatch<SetStateAction<"light-bg" | "dark-bg">>;
-// }
-// export const ThemeColor = createContext<themeType>({} as themeType);
+
 
 export default function RootLayout({
   children,
@@ -23,19 +19,11 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const [theme, setTheme] = useState<"dark" | ''>('')
-  // if (window !== undefined )
-  const [showMenu, setShowMenu] = useState(
-   typeof window !== 'undefined' ? window.innerWidth > 860 ? true : false : ''
-  );
-  const [isToggled, setIsToggled] = useState(
-    typeof localStorage !== 'undefined' ?  localStorage.currentTheme === "" ? false : true : undefined
-  );
-  const [showDescrip, setshowDescrip] = useState(
-  typeof window !== 'undefined' ? window.innerWidth < 860 ? true : false : ''
-  );
-  const [showCancel, setshowCancel] = useState(
-    typeof window !== 'undefined' ?  window.innerWidth < 860 ? true : false : ''
-  );
+
+  const [showMenu, setShowMenu] = useState(true);
+  const [isToggled, setIsToggled] = useState( true);
+
+  
 
   useEffect(() => {
     localStorage.currentTheme === null
@@ -49,24 +37,25 @@ export default function RootLayout({
       setIsToggled(false);
     }
 
+   
+    window.innerWidth > 860 ? setShowMenu(true) : setShowMenu(false);;
+      
     window.addEventListener("resize", () => {
       window.innerWidth > 860 ? setShowMenu(true) : setShowMenu(false);
-      window.innerWidth < 860 ? setshowDescrip(true) : setshowDescrip(false);
-      window.innerWidth < 860 ? setshowCancel(true) : setshowCancel(false);
     });
   }, []);
 
   return (
-    <html lang="en" className={`${theme }`}> 
-      <body className={` ${inter.className}`}>
+    <html lang="en" className={`${theme}`}>
+      <body className={` ${SpaceGrotesk.className}`}>
         {/*FIX ME change bg of na to smth transparent */}
-        <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] z-10 ${theme} ` }> 
+        <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] z-10 ${theme} `}>
           <header
             className={
               " relative flex justify-between h-[8vh] sm:h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px] text-[--light-primary-color] dark:text-[--dark-primary-color]"}
           >
             <h2
-              className={` text-2xl font-medium sm:text-[32px] heading-txt ${bebasNeue.className} `}
+              className={` text-2xl font-medium sm:text-4xl heading-txt ${SpaceGrotesk.className} `}
             >
               OSITA JERRY
             </h2>
@@ -74,12 +63,12 @@ export default function RootLayout({
             {/* <--------------------------------  MENU  ------------------------------> */}
             <div>
               {/* <------------------- HAMBURGER MENU ICON ------------------> */}
-              {!showMenu && (
+              { (
                 <svg
                   viewBox="0 -0.5 25 25"
                   width={60}
                   height={60}
-                  className={" cursor-pointer -mt-4 w-10 sm:w-16 fill-[--light-primary-color] dark:fill-[--dark-primary-color]"}
+                  className={" cursor-pointer -mt-4 w-10 visible lg:hidden sm:w-16 fill-[--light-primary-color] dark:fill-[--dark-primary-color]"}
                   onClick={() => setShowMenu(!showMenu)}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -102,10 +91,10 @@ export default function RootLayout({
                     clsx(` ${bebasNeue.className} h-[450px] w-40 pb-20 px-3 flex flex-col font-medium text-[16px] mt-1 z-10 gap-[32px] text-[#c7c7c7] dark:text-[#0a0a0a] bg-[#0a0a0a] dark:bg-[#fff] absolute right-[-16px] top-0 fill-[#0a0a0a] sm:right-[-28px] lg:flex-row lg:static lg:bg-[inherit] lg:h-6 lg:w-auto lg:pb-0 lg:px-0 dark:lg:bg-[inherit] dark:lg:text-[#c7c7c7] lg:text-[#0a0a0a]`, {
                       ' dark:lg:text-[#c7c7c7] dark:lg:fill-[#c7c7c7] ': theme !== 'dark'
                     })
-                    }
+                  }
                 >
                   {/* <----------------- CANCEL ICON ------------------> */}
-                  {showCancel && (
+                  
                     <li>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -113,18 +102,18 @@ export default function RootLayout({
                         height="30"
                         viewBox="0 0 16 16"
                         fill="#fff"
-                        className="-ml-9 mt-10  bg-[#00FDEE]"
+                        className="-ml-9 mt-10  bg-[#00FDEE] visible lg:hidden cursor-pointer"
+                        onClick={() => setShowMenu(!showMenu)}
                       >
                         <path
                           d="M9.89324 3.45816L7.51247 5.92536L5.04527 3.54459C4.74253 3.25245 4.26009 3.26105 3.96795 3.56379L3.43889 4.11206C3.14675 4.4148 3.15535 4.89724 3.45809 5.18938L5.92529 7.57015L3.54452 10.0373C3.25238 10.3401 3.26098 10.8225 3.56372 11.1147L4.11199 11.6437C4.41473 11.9359 4.89717 11.9273 5.18931 11.6245L7.57008 9.15733L10.0373 11.5381C10.34 11.8302 10.8225 11.8216 11.1146 11.5189L11.6437 10.9706C11.9358 10.6679 11.9272 10.1854 11.6245 9.8933L9.15726 7.51253L11.538 5.04534C11.8302 4.7426 11.8216 4.26016 11.5188 3.96802L10.9706 3.43896C10.6678 3.14682 10.1854 3.15542 9.89324 3.45816Z"
-                          onClick={() => setShowMenu(!showMenu)}
-                          className=" cursor-pointer"
+                          
+                          
                         />
                       </svg>
                     </li>
-                  )}
                   <li
-                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2 ` }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2 `}
                   >
                     <Link
                       href="/"
@@ -135,7 +124,7 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li
-                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2`}
                   >
                     <Link
                       href="/about"
@@ -145,7 +134,7 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li
-                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2`}
                   >
                     <Link
                       href="/work"
@@ -155,7 +144,7 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li
-                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2` }
+                    className={` border-b-2 border-[#c7c7c7] hover:border-[#8F00FE] hover:text-[#00FDEE] lg:border-b-0  lg:hover:border-[#8F00FE] lg:hover:border-b-2`}
                   >
                     <Link
                       href="/contact"
@@ -168,26 +157,17 @@ export default function RootLayout({
                   {/* <------------------- THEME TOGGLE ------------------> */}
                   <li>
                     <div
-                      className = {"flex gap-0 w-auto  h-auto justify-between lg:gap-1 lg:w-16 lg:h-[54px] lg:flex-col-reverse"}
+                      className={"flex gap-0 w-auto  h-auto justify-between lg:gap-1 lg:w-16 lg:h-[54px] lg:flex-col-reverse"}
+
                       
-                      onMouseEnter={() => {
-                        if (typeof window !== 'undefined') {
-                          window.innerWidth > 640 ? setshowDescrip(true) : "";
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        if (typeof window !== 'undefined') {
-                          window.innerWidth > 640 ? setshowDescrip(false) : "";
-                        }
-                      }}
                     >
-                      {showDescrip && (
-                        <span>{localStorage.currentTheme}-mode</span>
-                      )}
+                      <span className=" visible lg:hidden">{theme === '' ? 'Light' : 'dark'}-mode</span>
+                      
                       <input
                         type="checkbox"
                         checked={isToggled}
                         id="darkmode-toggle"
+                        
                         onChange={() => {
                           if (theme === "") {
                             setTheme("dark");
@@ -210,7 +190,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 49.739 49.739"
                           xmlSpace="preserve"
-                          
+
                         >
                           <path
                             d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
@@ -231,7 +211,7 @@ export default function RootLayout({
                           y="0px"
                           viewBox="0 0 496 496"
                           xmlSpace="preserve"
-                          
+
                         >
                           <rect
                             x="152.994"

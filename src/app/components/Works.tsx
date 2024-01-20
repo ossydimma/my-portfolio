@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useContext, useEffect, useState } from "react";
 // import { ThemeColor } from "../layout";
-import { Manrope, Bebas_Neue, Space_Grotesk } from "next/font/google";
+import { Manrope, Bebas_Neue,} from "next/font/google";
 import Image from "next/image";
 import SneakerImg from "@/app/assets/sneaker_img.jpg";
 import calcuImg from "@/app/assets/calculator_img.png";
@@ -11,7 +11,6 @@ import toDoImg from "https://i.postimg.cc/sD6QLyMh/new-To-Do-img.png";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"], weight: "700" });
-const SpaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "700" });
 // interface dataType {
 //   id: string;
 //   image: string;
@@ -78,18 +77,18 @@ export const Works = () => {
 
   return (
     <main className="border-y-2 border-[#484848] h-auto w-full">
-      <div className="px-[4%] lg:px-[40px]   mt-16 mb-5 w-[100%] ">
-        <header className={`text-center  mb-20 ${SpaceGrotesk.className}`}>
+      <div className="px-[4%] lg:px-[40px]   mt-10 mb-5 w-[100%] ">
+        <header className={`text-center  mb-20`}>
           <h1
-            className={`${SpaceGrotesk.className} uppercase text-[30px] heading-txt font-[400] text-[#0a0a0a] dark:text-white md:text-[35px] lg:text-[65px]`}
+            className={` uppercase text-[32px] heading-txt font-[400] text-[#0a0a0a] dark:text-white sm:text-[45px] md:text-[55px] lg:text-[65px] xl:text-[75]`}
           >
             Featured Projects
           </h1>
           <p
-            className={` text-[#222]   -mt-2 font-medium text-sm md:text-xl dark:text-[#c7c7c7]`}
+            className={` text-[#222]   -mt-2 font-medium text-lg md:text-xl dark:text-[#c7c7c7]`}
           >
             Here are some of the selected projects that showcase my passion for
-            front-end <br /> development.
+            front-end development.
           </p>
         </header>
         <div>
@@ -111,10 +110,10 @@ export const Works = () => {
                 />
               </div>
               <article
-                className={`w-[96%]    text-[#222] dark:text-[#c7c7c7] flex flex-col gap-1 ] lg:w-[38%] ${SpaceGrotesk.className}`}
+                className={`w-[96%]    text-[#222] dark:text-[#c7c7c7] flex flex-col gap-1 ] lg:w-[38%]`}
               >
                 <h3
-                  className={`text-2xl   heading-txt text-[#000] lg:text-xl xl:text-3xl dark:text-white ${bebasNeue.className} `}
+                  className={`text-3xl   heading-txt text-[#000]  lg:text-4xl dark:text-white ${bebasNeue.className} `}
                 >
                   {obj.name}
                 </h3>
@@ -123,8 +122,8 @@ export const Works = () => {
                 >
                   {obj.descri}
                 </p>
-                <ul className={`text-[16px] lg:text-sm xl:leading-4 xl:text-[18px] `}>
-                  <li className=" uppercase proj-info text-xl -ml-2 text-[#8F00FF] lg:px-4 xl:px-2 ">
+                <ul className={`text-[16px]  xl:leading-4 xl:text-[18px] `}>
+                  <li className=" uppercase proj-info text-lg lg:text-xl  text-[#8F00FF] lg:px-4 xl:px-2 ">
                     Project Info
                   </li>
                   <li className="proj-info flex justify-between">
@@ -140,7 +139,7 @@ export const Works = () => {
                     <span>Role</span> <span>{obj.role}</span>
                   </li>
                 </ul>
-                <div className=" flex mt-2 gap-4 text-xs  text-right text-[#000] md:gap-6 sm:text-sm xl:leading-6 xl:text-[18px] dark:text-white ">
+                <div className=" flex mt-2 gap-4 text-[16px]  text-right text-[#000] md:gap-6  xl:leading-6 xl:text-[18px] dark:text-white ">
                   <a href={obj.codeLink} className="flex items-center gap-1">
                     <span className=" hover:opacity-75 hover:scale-90 transition-all duration-500">
                       view code
