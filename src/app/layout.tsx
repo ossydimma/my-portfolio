@@ -28,7 +28,7 @@ export default function RootLayout({
    typeof window !== 'undefined' ? window.innerWidth > 860 ? true : false : ''
   );
   const [isToggled, setIsToggled] = useState(
-    typeof localStorage !== 'undefined' ?  localStorage.currentTheme === "" ? false : true : ''
+    typeof localStorage !== 'undefined' ?  localStorage.currentTheme === "" ? false : true : undefined
   );
   const [showDescrip, setshowDescrip] = useState(
   typeof window !== 'undefined' ? window.innerWidth < 860 ? true : false : ''
