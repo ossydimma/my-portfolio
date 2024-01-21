@@ -11,7 +11,9 @@ interface mailType {
 }
 
 export const Connect = () => {
+
   const form = useRef<null |  HTMLFormElement >(null); 
+
   const [mail, setMail] = useState<mailType>({
     email : "",
     name : "",
@@ -19,24 +21,15 @@ export const Connect = () => {
     btn : "SUBMIT"
   })
 
-  
-  const sendEmail : React.FormEventHandler<HTMLFormElement> = (e ) => {
+  //  sending Mail
+  const sendEmail : React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     setMail((prev)=> ({...prev, btn : (
       <div className="flex justify-center items-center h-full ml-5">
         <span className="loader"></span>
       </div>
     )}))
-    if (mail.email === '' || mail.name === '' || mail.message === '') { 
-      setTimeout(()=> {
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: "Please fill the form.",
-        });
-        setMail((prev)=> ({...prev, btn : "submit"}) )
-      }, 2000)
-    } else {
+    if (mail.email !== '' || mail.name !== '' || mail.message !== '') { 
       form.current 
       ? emailjs.sendForm('service_8fuxdlk', 'template_ggn6359', form.current, '-tB1ZCDPXqFnUFmyd')
         .then((result) => {
@@ -52,15 +45,10 @@ export const Connect = () => {
         }, (error) => {
             console.log(error.text);
         }) : undefined
-    }
+    } 
      
   };
 
-  // const sendMail = ()=> {
-  //   if (mail.email !== '' && mail.name !== '' && mail.message !== '') {
-
-  //   }
-  // }
   return (
     <main className=" mx-4 sm:mx-9 pt-10 ">
       <h1
