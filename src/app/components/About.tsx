@@ -10,7 +10,7 @@
         <> 
             <main className="pt-14  border-b-2 border-[#484848]">
 
-                <section className=" flex flex-col mb-16 px-[8%] justify-between gap-1  Lg:px-[5%]  lg:gap-[15%]  lg:flex-row">
+                <section className=" flex flex-col mb-16 mx-4 justify-between gap-1  sm:mx-9  lg:gap-[15%]  lg:flex-row">
                     <h1 className={` rev-heading-txt uppercase font-[400] text-[40px]  leading-[42px]  text-[#0a0a0a]  sm:text-[57px] sm:leading-[58px] md:text-[65px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}>about&nbsp;me</h1>
                     <div className="mt-3">
 
@@ -20,7 +20,7 @@
                 </section>
                 <div className=" mb-20 flex items-end justify-end mr-[5%] lg:justify-center lg:items-end lg:mr-0 ">
                     <a href="/"               
-                        className={`  w-[189px] text-right uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-7 rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px] sm:px-6 lg:w-[250px] lg:px-12  }`}
+                        className={`  w-[189px] text-right uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-7 rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px] sm:px-6 lg:w-[230px] lg:px-12  }`}
                     >
                         more about me
                     </a>

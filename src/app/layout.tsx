@@ -18,8 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const [theme, setTheme] = useState<"dark" | ''>('')
 
+
+  const [theme, setTheme] = useState<"dark" | ''>('')
   const [showMenu, setShowMenu] = useState(true);
   const [isToggled, setIsToggled] = useState( true);
 
@@ -49,7 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${theme}`}>
       <body className={` ${SpaceGrotesk.className}`}>
         {/*FIX ME change bg of na to smth transparent */}
-        <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] z-10 ${theme} `}>
+        <nav className={`fixed top-0 w-[100%] border-b-2 border-[#484848] bg-white z-10 ${theme} `}>
           <header
             className={
               " relative flex justify-between h-[8vh] sm:h-[12vh]  pt-4 pb-4  mx-4 sm:pt-6   sm:mx-7 xl:mx-[80px] text-[--light-primary-color] dark:text-[--dark-primary-color]"}
