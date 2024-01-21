@@ -1,8 +1,11 @@
+import { Connect } from "../components/Connect"
 
 
 const page = () => {
   return (
-    <div>contact</div>
+    <div className="mt-[12vh]">
+      <Connect />
+    </div>
   )
 }
 

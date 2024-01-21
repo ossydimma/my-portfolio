@@ -1,8 +1,11 @@
+import { About } from "../components/About"
 
 
 const page = () => {
   return (
-    <div>about</div>
+    <div className=" mt-[12vh]">
+      <About />
+    </div>
   )
 }
 
