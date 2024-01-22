@@ -31,14 +31,6 @@ export const Hero = () => {
 
           {/* <-----------------------  CONTACT ME -----------------------------> */}
           <div className=" w-auto h-auto flex  flex-row-reverse justify-center gap-2 -4 mx-0 sm:justify-end sm:gap  lg:w-[80%] sm:gap-3 ">
-            {/* <a
-              href="/Resume.pdf"
-              download
-              className={` uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-5 rounded-tr-none rounded-[200px] text-[10px] text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] sm:text-[16px]  `}
-            >
-              <div className=" w-3 h-3 bg-black border-2 border-white rounded-full  md:w-4 md:h-4 "></div>
-              <span className=" text-shadow  ">view resume </span>
-            </a> */}
             <Button 
               href="/Resume.pdf" 
               text="view Resume" 
