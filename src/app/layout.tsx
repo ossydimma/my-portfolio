@@ -28,7 +28,7 @@ export default function RootLayout({
 
   useEffect(() => {
     localStorage.currentTheme === null
-      ? localStorage.setItem("currentTheme", "light")
+      ? localStorage.setItem("currentTheme", "dark")
       : "";
     if (localStorage.currentTheme === "dark") {
       setTheme("dark");

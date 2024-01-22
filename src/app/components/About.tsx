@@ -1,11 +1,21 @@
+"use client"
+import Link from "next/link";
+import { ReactNode, useState } from "react"
+import { Medias } from "./Medias";
 
 
 
+interface btnType {
+    text : string;
+    href : string;
+    medias : string | ReactNode;
+    styles : string;
+}
 
 
 
-
- export const About = ()=> {
+ export const About = ({text , href, medias, styles}: btnType)=> {
+   
     return (
         <> 
             <main className="pt-14  border-b-2 border-[#484848]">
@@ -18,12 +28,14 @@
                         <p className={`  text-[#222] text-lg tracking-wide pb-5  md:text-xl md:tracking-wider dark:text-[#c7c7c7] `}>I am front-end developer that love the challenge of solving complex problems and creating beautiful, functional websites. Committed to continuous learning, I aspire to leverage my competencies in this feild to eventually build my career.</p>
                     </div>
                 </section>
-                <div className=" mb-20 flex items-end justify-end mr-[5%] lg:justify-center lg:items-end lg:mr-0 ">
-                    <a href="/"               
-                        className={`  w-[189px] text-right uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black py-4 px-7 rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px] sm:px-6 lg:w-[230px] lg:px-12  }`}
+                <div className={` mb-20 flex items-end gap-5 justify-end mr-[5%] ${styles}   `}>
+                    <Link href={href}             
+                        className={` px-8 py-4  uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black   rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px]   }`}
                     >
-                        more about me
-                    </a>
+                        {text}
+                        
+                    </Link>
+                    {medias}
                 </div>
             </main>
         </>
