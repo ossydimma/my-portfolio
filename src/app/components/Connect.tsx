@@ -72,13 +72,13 @@ export const Connect = () => {
               <Button 
                 href="mailto:chrisjerry070@gmail.com" 
                 text="chrisjerry070@gmail.com" 
-                div={<div className="w-3.5 h-3.5 bg-black border-2 border-white rounded-full  sm:w-4 sm:h-4 "></div>}
+                
                 styles= "bg-gradient-to-l from-[#00FDEE] to-black mr-7 rounded-tl-none rounded-br-none rounded-[120px]" 
               />
               <Button 
                 href="/Resume.pdf" 
                 text="view Resume" 
-                div={<div className=" w-3.5 h-3.5 bg-black border-2 border-white rounded-full  sm:w-4 sm:h-4  "></div>}
+                
                 styles= "uppercase bg-gradient-to-l from-[#8F00FF]  to-black rounded-tl-none rounded-br-none rounded-[120px] ml-6 sm:ml-0" 
               />
              

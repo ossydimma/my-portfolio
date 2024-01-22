@@ -42,7 +42,6 @@ export const Hero = () => {
             <Button 
               href="/Resume.pdf" 
               text="view Resume" 
-              div={<div className=" w-3.5 h-3.5 bg-black border-2 border-white rounded-full  sm:w-4 sm:h-4  "></div>}
               styles= "uppercase bg-gradient-to-l from-[#8F00FF]  to-black rounded-tr-none rounded-[200px]  border-[2px] border-[#222]  dark:border-[#c7c7c7] " 
             />
             <Medias />
