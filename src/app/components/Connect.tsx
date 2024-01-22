@@ -3,6 +3,7 @@ import { useState , useRef, ReactNode} from "react";
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import { Medias } from "./Medias";
+import { Button } from "./Button";
 
 interface mailType {
   email : string;
@@ -67,25 +68,20 @@ export const Connect = () => {
               For more info:
             </p>
             <section className=" w-[100%] lg:w-[85%]  flex flex-col  gap-4 items-start sm:items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none sm:bg-slate-600 bg-transparent ">
-              <a
-                href="mailto:chrisjerry070@gmail.com"
-                className="  w-[290px] flex items-center gap-3 mr-7  py-4 px-7 bg-gradient-to-l from-[#00FDEE] to-black   rounded-tl-none rounded-br-none rounded-[120px]"
-              >
-                <div className=" w-3 h-3 bg-black border-2   border-white rounded-full  md:w-4 md:h-4 "></div>
-                <span className={` text-shadow `}>
-                  chrisjerry070@gmail.com
-                </span>
-              </a>
-              <a
-                href="/Resume.pdf"
-                download
-                className=" flex w-[190px]   items-center gap-3  uppercase bg-gradient-to-l from-[#8F00FF] to-black shadow-3xl ml-6 sm:ml-0 py-4 px-7 rounded-tl-none rounded-br-none rounded-[120px]"
-              >
-                <div className=" w-3 h-3 bg-black border-2  border-white rounded-full  md:w-4 md:h-4 "></div>
-                <span className={` text-shadow`}>
-                  view Resume
-                </span>
-              </a>
+             
+              <Button 
+                href="mailto:chrisjerry070@gmail.com" 
+                text="chrisjerry070@gmail.com" 
+                div={<div className="w-3.5 h-3.5 bg-black border-2 border-white rounded-full  sm:w-4 sm:h-4 "></div>}
+                styles= "bg-gradient-to-l from-[#00FDEE] to-black mr-7 rounded-tl-none rounded-br-none rounded-[120px]" 
+              />
+              <Button 
+                href="/Resume.pdf" 
+                text="view Resume" 
+                div={<div className=" w-3.5 h-3.5 bg-black border-2 border-white rounded-full  sm:w-4 sm:h-4  "></div>}
+                styles= "uppercase bg-gradient-to-l from-[#8F00FF]  to-black rounded-tl-none rounded-br-none rounded-[120px] ml-6 sm:ml-0" 
+              />
+             
               <div className="  mr-0 ml-14 sm:ml-0 sm:mr-[10px]">
                 <Medias />
               </div>
@@ -143,16 +139,14 @@ export const Connect = () => {
         </form>
       </div>
      
-        <p
-          className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
-        >
-          © 2024 Osita jerry  Designed and built by{" "}
-          <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
-          <span className=" heading-txt text-lg">Love</span> &{" "}
-          <span className=" heading-txt text-lg">Coffee</span>.
-        </p>
-
-      
+      <p
+        className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
+      >
+        © 2024 Osita jerry  Designed and built by{" "}
+        <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
+        <span className=" heading-txt text-lg">Love</span> &{" "}
+        <span className=" heading-txt text-lg">Coffee</span>.
+      </p>
     </main>
   );
 };
