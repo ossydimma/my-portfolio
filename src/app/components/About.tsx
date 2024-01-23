@@ -25,7 +25,7 @@ export const About = ({ text, href, medias, stack, styles }: btnType) => {
               className={` font-semibold  uppercase pb-5 text-[#000] text-xl md:text-3xl   xl:text-4xl dark:text-white`}
             >
               I am Osita Jerry, a&nbsp;front-&nbsp;end&nbsp;developer. <br />{" "}
-              Has a bussiness Background.
+              Has a bussiness management Background.
             </h3>
             <p
               className={` sm:-mx-[6%] text-[#222] text-lg tracking-wide pb-5   md:text-2xl lg:text-3xl md:tracking-wider dark:text-[#c7c7c7] `}
@@ -37,21 +37,12 @@ export const About = ({ text, href, medias, stack, styles }: btnType) => {
             </p>
           </div>
         </section>
-        {/* <div className=" flex flex-col justify-center items-center mb-20">
-          <h3
-            className={`pb-3 font-semibold heading-txt uppercase   text-[#000] text-2xl  md:text-3xl   xl:text-5xl dark:text-white`}
-          >
-            My tech Stack
-          </h3>
-          <p className="mb-20 text-xl md:text-3xl text-center font-semibold dark:text-white ">
-            {" "}
-            Technologies I’ve been working with recently.
-          </p>
-          <Slider />
-        </div> */}
+
         {stack}
+
+        {/* <----------------------------| LINKS |---------------------------> */}
         <div
-          className={` mb-20 flex items-end gap-5 justify-end mr-[5%] ${styles}   `}
+          className={`mb-12 lg:mb-[70px] flex items-end gap-5 justify-end mr-[5%] ${styles}   `}
         >
           <Link
             href={href}

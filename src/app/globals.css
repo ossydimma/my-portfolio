@@ -48,7 +48,7 @@
   background:  var(--light-background);
 }
 .dark {
-  background: var(--dark-background);
+  background: #191919;
 }
 
 

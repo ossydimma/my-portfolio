@@ -10,7 +10,7 @@ const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 export const Hero = () => {
   return (
     <>
-      <div className=" mx-[5%] mb-8  mt-[12vh] h-auto flex flex-col justify-between gap-10  items-center py-10 sm:gap-16 sm:mx-[50px] md:mx-[60px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-5 xl:mx-[108px]">
+      <div className=" px-[4%] lg:px-[40px] mb-8  mt-[12vh] h-auto flex flex-col justify-between gap-10  items-center py-10 sm:gap-16 sm:mx-[50px] md:mx-[60px]  lg:py-0 lg:flex-row lg:h-[88vh] lg:gap-5 ">
         {/* <----------------------- LEFT SECTION -----------------------------> */}
         <section className=" w-[90%]   lg:w-[480px] xl:w-[544px] ">
           {/* <----------------------- TEXTS-----------------------------> */}
@@ -24,7 +24,7 @@ export const Hero = () => {
             <p
               className={`font-[400] text-[15px] text-[#000] dark:text-[#c7c7c7] pb-[40px] xl:text-lg  ${manrope.className}`}
             >
-              A front-end developer, who is passionate about building accessible
+              A skilled and creative frontend developer with years of experience in web development, who is passionate about building responsive
               and user friendly websites.
             </p>
           </div>

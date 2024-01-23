@@ -11,19 +11,10 @@ import toDoImg from "https://i.postimg.cc/sD6QLyMh/new-To-Do-img.png";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"], weight: "700" });
-// interface dataType {
-//   id: string;
-//   image: string;
-//   name: string;
-//   descri: string;
-//   stack: string;
-//   year: string;
-//   role: string;
-//   codeLink: string;
-//   webLink: string;
-// }
+
 
 export const Works = () => {
+  
   const data = [
     {
       id: "1",
@@ -98,7 +89,7 @@ export const Works = () => {
               key={obj.id}
             >
               <div
-                className={`w-[98%] px-[2%] py-12   rounded-xl bg-[#1A1A1A] flex justify-center items-center sm:w-[96%] sm:px-[7%] sm:py-16 lg:px-6  lg:py-20 lg:w-auto`}
+                className={`w-[98%] px-[2%] py-12   rounded-xl bg-[#0a0a0a] flex justify-center items-center sm:w-[96%] sm:px-[7%] sm:py-16 lg:px-6  lg:py-20 lg:w-auto`}
               >
                 <Image
                   width={400}

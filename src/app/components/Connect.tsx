@@ -53,14 +53,15 @@ export const Connect = () => {
 
   return (
     <main className=" border-t-2 border-[#484848]  pt-10 ">
-      <div className="sm:mx-9  ">
+      <div className="px-[4%] lg:px-[40px] ">
         <h1
           className={` heading-txt pb-16 uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
         >
           let&apos;s connect
         </h1>
 
-        <div className=" w-[100%] flex flex-col-reverse gap-[50px] mx-4 lg:flex-row-reverse  lg-gap-0">
+        {/* <----------------------------| MORE INFO |---------------------------> */}
+        <div className=" w-[100%] flex flex-col-reverse gap-[50px]  lg:flex-row-reverse  lg-gap-0">
           <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0  sm:flex-col  lg:w-[43%] ">
             <div className="  ">
               <p
@@ -76,11 +77,6 @@ export const Connect = () => {
                   
                   styles= "bg-gradient-to-l from-[#00FDEE] to-black mr-7 rounded-tl-none rounded-br-none rounded-[120px]" 
                 />
-
-
-
-
-
                 
                 <Button 
                   href="/Resume.pdf" 
@@ -101,10 +97,11 @@ export const Connect = () => {
               I am open to remote and onsite full-&nbsp;time, part-time, and
               contract frontend web development jobs.
             </p>
-              
-          
-          
+            
           </div>
+
+
+          {/* <----------------------------| FORM |---------------------------> */}
           <form 
             ref={form}
             onSubmit={sendEmail}
@@ -145,7 +142,8 @@ export const Connect = () => {
             </button>
           </form>
         </div>
-      
+
+      {/* <----------------------------| FOOTER |---------------------------> */}
         <p
           className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
         >

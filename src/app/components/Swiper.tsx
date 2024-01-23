@@ -6,19 +6,19 @@ import "swiper/css";
 import { useEffect, useState } from "react";
 
 export const Slider = () => {
-    const [slidePerView, setSlidesPreview] = useState<number | undefined>(5); 
+    // const [slidePerView, setSlidesPreview] = useState<number | undefined>(5); 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        window.innerWidth > 1000 ? setSlidesPreview(5) : window.innerWidth > 860  ? setSlidesPreview(4)  :  setSlidesPreview(3)   ;
+    //     window.innerWidth > 1000 ? setSlidesPreview(5) : window.innerWidth > 860  ? setSlidesPreview(4)  :  setSlidesPreview(3)   ;
     
      
-    }, [slidePerView])
+    // }, [slidePerView])
     
   return (
     <div className=" flex justify-center items-center w-[100%]">
       <Swiper
-        slidesPerView={slidePerView}
+        slidesPerView={5}
         modules={[Autoplay]}
         autoplay={{
           delay: 800,
@@ -30,7 +30,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 120 120"
             fill="none"
           >
@@ -56,7 +56,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 120 119"
             fill="none"
           >
@@ -91,7 +91,7 @@ export const Slider = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 120 120"
             fill="none"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
           >
             <path d="M7.5 7.5H112.5V112.5H7.5V7.5Z" fill="#F5DE19" />
             <path
@@ -103,7 +103,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 117 87"
             fill="none"
           >
@@ -123,7 +123,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 131 131"
             fill="none"
           >
@@ -136,7 +136,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className=" w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 105 105"
             fill="none"
           >
@@ -156,7 +156,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className="  w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 113 101"
             fill="none"
           >
@@ -176,7 +176,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className="  w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 88 88"
             fill="white"
           >
@@ -190,7 +190,7 @@ export const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <svg
-           className=" w-[50px] sm:w-[90px]"
+           className="  w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@ export const Slider = () => {
         <SwiperSlide>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[50px] sm:w-[90px]"
+            className="  w-[50px] md:w-[70px] lg:w-[90px]"
             viewBox="0 0 112 112"
             fill="none"
           >

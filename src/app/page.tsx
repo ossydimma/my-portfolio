@@ -19,7 +19,7 @@ export default function Home() {
             <h3
               className={`pb-3 font-semibold heading-txt uppercase   text-[#000] text-2xl  md:text-3xl   xl:text-5xl dark:text-white`}
             >
-              Stack
+              my tech Stack
             </h3>
             <p className="mb-24 text-xl md:text-3xl text-center font-semibold dark:text-white ">
               {" "}
