@@ -21,11 +21,11 @@ export const Slider = () => {
         slidesPerView={slidePerView}
         modules={[Autoplay]}
         autoplay={{
-          delay: 1000,
+          delay: 800,
           disableOnInteraction: false,
         }}
         loop={true}
-        className="w-[70%] "
+        className="w-[80%] "
       >
         <SwiperSlide>
           <svg

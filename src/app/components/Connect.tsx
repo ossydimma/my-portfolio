@@ -52,101 +52,109 @@ export const Connect = () => {
   };
 
   return (
-    <main className=" mx-4 sm:mx-9 pt-10 ">
-      <h1
-        className={` heading-txt  uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
-      >
-        let&apos;s connect
-      </h1>
+    <main className=" border-t-2 border-[#484848]  pt-10 ">
+      <div className="sm:mx-9  ">
+        <h1
+          className={` heading-txt pb-16 uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
+        >
+          let&apos;s connect
+        </h1>
 
-      <div className=" w-[100%] flex flex-col-reverse gap-[50px]   mt-20 lg:flex-row-reverse  lg-gap-0">
-        <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0  sm:flex-col  lg:w-[43%] ">
-          <div className="  ">
-            <p
-              className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white `}
-            >
-              For more info:
-            </p>
-            <section className=" w-[100%] lg:w-[85%]  flex flex-col  gap-4 items-start sm:items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none sm:bg-slate-600 bg-transparent ">
-             
-              <Button 
-                href="mailto:chrisjerry070@gmail.com" 
-                text="chrisjerry070@gmail.com" 
+        <div className=" w-[100%] flex flex-col-reverse gap-[50px] mx-4 lg:flex-row-reverse  lg-gap-0">
+          <div className=" w-[100%]  text-white flex flex-col-reverse gap-10 sm:gap-0  sm:flex-col  lg:w-[43%] ">
+            <div className="  ">
+              <p
+                className={`   font-semibold  uppercase text-lg text-[#000] sm:text-xl   md:text-lg    dark:text-white `}
+              >
+                For more info:
+              </p>
+              <section className=" w-[100%] lg:w-[85%]  flex flex-col  gap-4 items-start sm:items-end rounded-[70px] rounded-tr-[250px] rounded-tl-none rounded-b-none sm:bg-slate-600 bg-transparent ">
+              
+                <Button 
+                  href="mailto:chrisjerry070@gmail.com" 
+                  text="chrisjerry070@gmail.com" 
+                  
+                  styles= "bg-gradient-to-l from-[#00FDEE] to-black mr-7 rounded-tl-none rounded-br-none rounded-[120px]" 
+                />
+
+
+
+
+
                 
-                styles= "bg-gradient-to-l from-[#00FDEE] to-black mr-7 rounded-tl-none rounded-br-none rounded-[120px]" 
-              />
-              <Button 
-                href="/Resume.pdf" 
-                text="view Resume" 
-                
-                styles= "uppercase bg-gradient-to-l from-[#8F00FF]  to-black rounded-tl-none rounded-br-none rounded-[120px] ml-6 sm:ml-0" 
-              />
-             
-              <div className="  mr-0 ml-14 sm:ml-0 sm:mr-[10px]">
-                <Medias />
-              </div>
-            </section>
-          </div>
-          
-          <p
-            className={`  w-[100%] lg:w-[85%] py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black ] text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
-          >
-            I am open to remote and onsite full-&nbsp;time, part-time, and
-            contract frontend web development jobs.
-          </p>
+                <Button 
+                  href="/Resume.pdf" 
+                  text="view Resume" 
+                  
+                  styles= "uppercase bg-gradient-to-l from-[#8F00FF]  to-black rounded-tl-none rounded-br-none rounded-[120px] ml-6 sm:ml-0" 
+                />
+              
+                <div className="  mr-0 ml-14 sm:ml-0 sm:mr-[10px]">
+                  <Medias />
+                </div>
+              </section>
+            </div>
             
-         
-         
+            <p
+              className={`  w-[100%] lg:w-[85%] py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black ] text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
+            >
+              I am open to remote and onsite full-&nbsp;time, part-time, and
+              contract frontend web development jobs.
+            </p>
+              
+          
+          
+          </div>
+          <form 
+            ref={form}
+            onSubmit={sendEmail}
+            className=" w-[100%]  flex flex-col  gap-6 lg:w-[50%] ">
+            <input
+              type="text"
+              name="user_name"
+              value={mail.name}
+              required
+              placeholder="NAME"
+              onChange={(e) => {setMail((prev)=>({...prev, name : e.target.value}))}}
+              className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
+            />
+            <input
+              type="email"
+              name="user_email"
+              value={mail.email}
+              required
+              placeholder="EMAIL"
+              onChange={(e) => {setMail((prev)=>({...prev, email : e.target.value}))}}
+              className="  w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] dark:border-[#c7c7c7] border-[3px] bg-transparent outline-none dark:text-gray-200"
+
+            />
+            <textarea
+              required
+              placeholder="MESSAGE"
+              name="message"
+              value={mail.message}
+              onChange={(e) => {setMail((prev)=>({...prev, message : e.target.value}))}}
+              className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 h-40 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
+
+            ></textarea>
+            <button
+              type="submit"
+              className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-3.5  pl-10 rounded-tl-none  rounded-bl-none  rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] }`}
+            >
+              {mail.btn}
+            </button>
+          </form>
         </div>
-        <form 
-          ref={form}
-          onSubmit={sendEmail}
-          className=" w-[100%]  flex flex-col  gap-6 lg:w-[50%] ">
-          <input
-            type="text"
-            name="user_name"
-            value={mail.name}
-            required
-            placeholder="NAME"
-            onChange={(e) => {setMail((prev)=>({...prev, name : e.target.value}))}}
-            className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
-          />
-          <input
-            type="email"
-            name="user_email"
-            value={mail.email}
-            required
-            placeholder="EMAIL"
-            onChange={(e) => {setMail((prev)=>({...prev, email : e.target.value}))}}
-            className="  w-[100%] p-6 lg:w-[80%] ] lg:p-5 border-[#222] dark:border-[#c7c7c7] border-[3px] bg-transparent outline-none dark:text-gray-200"
-
-          />
-          <textarea
-            required
-            placeholder="MESSAGE"
-            name="message"
-            value={mail.message}
-            onChange={(e) => {setMail((prev)=>({...prev, message : e.target.value}))}}
-            className=" w-[100%] p-6 lg:w-[80%] ] lg:p-5 h-40 border-[#222] border-[3px] dark:border-[#c7c7c7] bg-transparent outline-none dark:text-gray-200"
-
-          ></textarea>
-          <button
-            type="submit"
-            className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-3.5  pl-10 rounded-tl-none  rounded-bl-none  rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] }`}
-          >
-            {mail.btn}
-          </button>
-        </form>
+      
+        <p
+          className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
+        >
+          © 2024 Osita jerry  Designed and built by{" "}
+          <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
+          <span className=" heading-txt text-lg">Love</span> &{" "}
+          <span className=" heading-txt text-lg">Coffee</span>.
+        </p>
       </div>
-     
-      <p
-        className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
-      >
-        © 2024 Osita jerry  Designed and built by{" "}
-        <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
-        <span className=" heading-txt text-lg">Love</span> &{" "}
-        <span className=" heading-txt text-lg">Coffee</span>.
-      </p>
     </main>
   );
 };
