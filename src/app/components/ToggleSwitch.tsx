@@ -173,7 +173,7 @@ export const ToggleSwitch = ({
         </label>
       </div>
       {toggledDiv && (
-        <div className=" absolute  top-[25px] right-0   w-[150px] rounded-lg bg-slate-900 text-white px-2 py-3 fill-white stroke-white  dark:bg-white dark:text-[#000] dark:fill-black  dark:stroke-black lg:right-[-90%]">
+        <div className=" absolute  top-[25px] right-0   w-[150px] rounded-lg bg-slate-900 text-white px-2 py-3 fill-white stroke-white  dark:bg-white dark:text-[#000] dark:fill-black  dark:stroke-black lg:right-[-90%] ">
           <div
             className=" flex text-sm justify-between items-center mb-2 cursor-pointer p-1 hover:bg-[#484848] dark:hover:text-white"
             onClick={() => {

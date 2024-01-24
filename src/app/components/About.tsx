@@ -46,7 +46,7 @@ export const About = ({ text, href, medias, stack, styles }: btnType) => {
         >
           <Link
             href={href}
-            className={` px-8 py-4  uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black   rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px]   }`}
+            className={` px-8 py-4  uppercase shadow-2xl font-bold bg-gradient-to-l from-[#8F00FF] to-black   rounded-tl-none rounded-br-none  rounded-[200px]  text-white  flex items-center gap-3 border-[2px] border-[#222]  dark:border-[#c7c7c7] text-[16px] hover:scale-90 transition-all duration-300  }`}
           >
             {text}
           </Link>

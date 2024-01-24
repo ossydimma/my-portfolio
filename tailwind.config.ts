@@ -20,6 +20,9 @@ const config: Config = {
         lg : '860px',
         xl : '1072px',
       },
+      transitionProperty: {
+        'height': 'height',
+      },
     },
   },
   plugins: [],

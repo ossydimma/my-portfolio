@@ -18,16 +18,18 @@ export const Works = () => {
   const data = [
     {
       id: "1",
-      image: 'https://i.postimg.cc/FHp1KrTT/space-img.png',
-      name: "Space Tourism",
+      image: 'https://i.postimg.cc/nhgrmjGh/new-To-Do-img1.png',
+      name: "To do list",
       descri:
-        "This website was inspirated by frontend mentor, This website showcase the benefits of using TypeScript in modern web developments, how it improves code quality and make it easier to maintain and scale large projects",
-      stack: "React + Typescript + Sass",
-      year: "2023",
+        "Built a to-do-list that helps users enter editable tasks, allowing user to edit and delete tasks, and uses localStorage to store tasks which helps to save and display the tasks even when the page is reloaded. It is very convenient for users to not have to worry about losing their tasks due to a page refresh.",
+      stack: "HTML + CSS + JavaScript",
+      year: "2022",
       role: "Front-end Developer",
-      codeLink: "https://github.com/ossydimma/space-tourism",
-      webLink: "https://space-tourism-rebuild.vercel.app/",
+      codeLink: "https://github.com/ossydimma/toDoList2",
+      webLink: "https://to-do-bay-two.vercel.app/",
     },
+    
+    
     {
       id: "2",
       image: 'https://i.postimg.cc/VLDcrJc0/sneaker-img.jpg',
@@ -40,36 +42,49 @@ export const Works = () => {
       codeLink: "https://github.com/ossydimma/sneakers-store",
       webLink: "https://e-commerce-sneaker-store.vercel.app/",
     },
+   
     {
       id: "3",
-      image: 'https://i.postimg.cc/nhgrmjGh/new-To-Do-img1.png',
-      name: "To do list",
+      image: 'https://i.postimg.cc/FHp1KrTT/space-img.png',
+      name: "Space Tourism",
       descri:
-        "Built a to-do-list that helps users enter editable tasks, allowing user to edit and delete tasks, and uses localStorage to store tasks which helps to save and display the tasks even when the page is reloaded. It is very convenient for users to not have to worry about losing their tasks due to a page refresh.",
-      stack: "HTML + CSS + JavaScript",
-      year: "2022",
+        "This website was inspirated by frontend mentor, Space tourism multi-page website.",
+      stack: "React + Typescript + Sass",
+      year: "2023",
       role: "Front-end Developer",
-      codeLink: "https://github.com/ossydimma/toDoList2",
-      webLink: "https://to-do-bay-two.vercel.app/",
+      codeLink: "https://github.com/ossydimma/space-tourism",
+      webLink: "https://space-tourism-rebuild.vercel.app/",
     },
     {
       id: "4",
-      image: 'https://i.postimg.cc/90PCNbSL/calculator-img.png',
-      name: "Basic Calculator",
+      image: 'https://i.postimg.cc/t4mFWH5s/uba-clone1.png',
+      name: "UBA Mobile App Clone",
       descri:
-        "This was one of the first projects I built, it helped improve my HTML and CSS skills, mastering the concepts of flexBox and Grid, which help in creating flexible and responsive web layouts",
-      stack: "HTML + CSS + JavaScript",
-      year: "2022",
+        "Building a mobile app without mobile development tools, crafted with website tools.",
+      stack: "React + Tailwind css + Typescript",
+      year: "2023-Present",
       role: "Front-end Developer",
-      codeLink: "https://github.com/ossydimma/basic_calculator",
-      webLink: "https://basic-calculator-wine.vercel.app",
+      codeLink: "https://github.dev/ossydimma/uba-mobile-app",
+      webLink: "undefined",
+    },
+    {
+      id: "5",
+      image: 'https://i.postimg.cc/cCCSKjBB/Share-Am-Img.png',
+      name: "Share Am",
+      descri:
+        "Developing a web application that provides users with high-quality video and audio during screensharing sessions.",
+      stack: "HTML + CSS + Javascript + Electron.js",
+      year: "2023-Present",
+      role: "Front-end Developer",
+      codeLink: "https://github.com/ossydimma/ShareAm",
+      webLink: "undefined",
     },
   ];
 
   return (
     <main className="border-y-2 border-[#484848] h-auto w-full">
       <div className="px-[4%] lg:px-[40px]   mt-10 mb-5 w-[100%] ">
-        <header className={`text-center  mb-20`}>
+        <header className={`text-center  mb-28`}>
           <h1
             className={` uppercase text-[32px] heading-txt font-[400] text-[#0a0a0a] dark:text-white sm:text-[45px] md:text-[55px] lg:text-[65px] xl:text-[75]`}
           >
@@ -97,7 +112,7 @@ export const Works = () => {
                   src={obj.image}
                   alt=" seakers"
                  
-                  className=" border-black  border-2 w-[75%]   rounded-xl "
+                  className=" border-black  border-2 w-[75%]   rounded-xl hover:scale-110 transition-all duration-500 "
                 />
               </div>
               <article
@@ -130,7 +145,7 @@ export const Works = () => {
                     <span>Role</span> <span>{obj.role}</span>
                   </li>
                 </ul>
-                <div className=" flex mt-2 gap-4 text-[16px]  text-right text-[#000] md:gap-6  xl:leading-6 xl:text-[18px] dark:text-white ">
+                <div className=" flex mt-2 gap-2 text-[16px]  text-right text-[#000]  xl:leading-6 xl:text-[18px] dark:text-white ">
                   <a href={obj.codeLink} className="flex items-center gap-1">
                     <span className=" hover:opacity-75 hover:scale-90 transition-all duration-500">
                       view code
@@ -150,7 +165,11 @@ export const Works = () => {
                       />
                     </svg>
                   </a>
-                  <a href={obj.webLink} className=" flex items-center gap-0.5">
+                  <div>
+                    
+                  </div>
+                  {obj.webLink !== "undefined" ? (
+                    <a href={obj.webLink} className=" flex items-center gap-0.5">
                     <span className=" hover:opacity-75 hover:scale-90 transition-all duration-500">
                       view site
                     </span>
@@ -174,6 +193,10 @@ export const Works = () => {
                       </defs>
                     </svg>
                   </a>
+                  ) : (
+                    <p>coming soon...</p>
+                  )}
+                  
                 </div>
                 <h4></h4>
               </article>

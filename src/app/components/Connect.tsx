@@ -136,7 +136,7 @@ export const Connect = () => {
             ></textarea>
             <button
               type="submit"
-              className={` uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-3.5  pl-10 rounded-tl-none  rounded-bl-none  rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] }`}
+              className={`hover:scale-90 transition-all duration-300 uppercase shadow-2xl border-[3px] border-[#222] dark:border-[#c7c7c7]  font-bold bg-gradient-to-l from-[#00FDEE] to-black p-3.5  pl-10 rounded-tl-none  rounded-bl-none  rounded-[200px]  text-white  flex items-center gap-3 text-[16px]  w-[150px] }`}
             >
               {mail.btn}
             </button>
@@ -147,8 +147,8 @@ export const Connect = () => {
         <p
           className={`text-center mt-10 mb-5 text-sm text-[#000] dark:text-[#c7c7c7] `}
         >
-          © 2024 Osita jerry  Designed and built by{" "}
-          <span className=" text-[#00FDEE] text-lg">Osita</span> with{" "}
+          Copyright ©2024 All rights reserved | This template is Designed & built by
+          <span className=" text-[#00FDEE] text-lg"> Osita</span> with{" "}
           <span className=" heading-txt text-lg">Love</span> &{" "}
           <span className=" heading-txt text-lg">Coffee</span>.
         </p>
