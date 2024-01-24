@@ -86,26 +86,26 @@ export const NavBar = ({ theme, setTheme }: themeType) => {
                         {showMenu && (
                             <ul
                                 className={
-                                    clsx(` ${bebasNeue.className} h-[450px] w-40 pb-20 px-3 flex flex-col font-medium text-[16px] mt-1 z-20 gap-[32px] text-[#c7c7c7] dark:text-[#0a0a0a] bg-[#0a0a0a] dark:bg-[#fff] absolute right-[-16px] top-0 fill-[#0a0a0a] sm:right-[-28px] lg:flex-row lg:static lg:bg-[inherit] lg:h-6 lg:w-auto lg:pb-0 lg:pl-0 lg:pr-16 dark:lg:bg-[inherit] dark:lg:text-[#c7c7c7] lg:text-[#0a0a0a]`, {
+                                    clsx(` ${bebasNeue.className} h-screen w-[50%] pb-20 px-3 flex flex-col font-medium text-xl lg:text-[16px] mt-1 z-20 gap-[50px] text-[#c7c7c7] dark:text-[#0a0a0a] bg-[#0a0a0a] dark:bg-[#fff] absolute right-[-16px] top-0 fill-[#0a0a0a] sm:right-[-28px] lg:flex-row lg:static lg:bg-[inherit] lg:h-6 lg:w-auto lg:pb-0 lg:pl-0 lg:pr-16 dark:lg:bg-[inherit] dark:lg:text-[#c7c7c7] lg:text-[#0a0a0a]`, {
                                         ' dark:lg:text-[#c7c7c7] dark:lg:fill-[#c7c7c7] ': theme !== 'dark'
                                     })
                                 }
                             >
                                 {/* <----------------- CANCEL ICON ------------------> */}
 
-                                <li>
+                                <li className="-ml-10 pl-3 mt-16 mb-11 w-24 bg-[#00FDEE] visible lg:hidden fill-white dark:fill-black">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="80px"
-                                        height="30"
+                                        width="80"
+                                        height="40"
                                         viewBox="0 0 16 16"
-                                        fill="#fff"
-                                        className="-ml-9 mt-10  bg-[#00FDEE] visible lg:hidden cursor-pointer"
-                                        onClick={() => setShowMenu(!showMenu)}
+                                        // fill="#fff"
+                                       
                                     >
                                         <path
                                             d="M9.89324 3.45816L7.51247 5.92536L5.04527 3.54459C4.74253 3.25245 4.26009 3.26105 3.96795 3.56379L3.43889 4.11206C3.14675 4.4148 3.15535 4.89724 3.45809 5.18938L5.92529 7.57015L3.54452 10.0373C3.25238 10.3401 3.26098 10.8225 3.56372 11.1147L4.11199 11.6437C4.41473 11.9359 4.89717 11.9273 5.18931 11.6245L7.57008 9.15733L10.0373 11.5381C10.34 11.8302 10.8225 11.8216 11.1146 11.5189L11.6437 10.9706C11.9358 10.6679 11.9272 10.1854 11.6245 9.8933L9.15726 7.51253L11.538 5.04534C11.8302 4.7426 11.8216 4.26016 11.5188 3.96802L10.9706 3.43896C10.6678 3.14682 10.1854 3.15542 9.89324 3.45816Z"
-
+                                            className=" cursor-pointer"
+                                            onClick={() => setShowMenu(!showMenu)}
 
                                         />
                                     </svg>
