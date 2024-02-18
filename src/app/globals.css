@@ -51,14 +51,6 @@
   background: #191919;
 }
 
-
-/* .nav-text-active {
-  color: #8F00FF;
-} */
-
-
-
-
 /*  toggle  styles*/
 label {
   width: 48px;
@@ -202,22 +194,7 @@ input:checked + label svg.moon {
       transform: rotate(360deg);
    }
   } 
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #c7c7c7;
-    --secondary-color: #fff;
-    --background: #0a0a0a;
-  }
-} */
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+  
+
 

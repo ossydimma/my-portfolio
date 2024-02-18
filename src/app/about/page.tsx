@@ -1,5 +1,6 @@
 import { About } from "../components/About";
 import { Connect } from "../components/Connect";
+import { Experience } from "../components/Experience";
 import { Medias } from "../components/Medias";
 import { Bebas_Neue } from "next/font/google";
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
@@ -29,29 +30,81 @@ const page = () => {
       </section>
       {/* <----------------------------|  EXPERIENCE  |----------------------------> */}
       <div className="border-y-2 border-[#484848]  py-10 lg:pt-24">
-        <section className=" flex justify-between items-center gap-14 flex-col  mx-[5%]  lg:flex-row  lg:gap-0 lg:items-start">
+        <section className=" flex justify-between items-center gap-32 flex-col  mx-[5%]  lg:flex-row  lg:gap-0 lg:items-start">
           <h1
             className={`rev-heading-txt text-center  uppercase font-[700] text-[#0a0a0a]  text-3xl lg:text-5xl  lg:text-left  dark:text-[#fff] `}
           >
             My Experience
           </h1>
-          <article className=" w-[95%] lg:w-[50%] flex flex-col gap-8  ">
-            <div className=" flex justify-between items-center text-[#000]  dark:text-[#fff]">
-              <h3 className=" text-xl sm:text-2xl font-[500]">collaboration</h3>
-              <span className="text-xs sm:text-lg">Aug 2022 - Present</span>
-            </div>
-            <p className=" mb-4 tracking-normal text-lg text-[#222] dark:text-[#c7c7c7] sm:text-xl sm:tracking-wide">
-              I have been contributing to an open-source project called ShareAm
+          <div className=" w-[95%] lg:w-[50%] flex flex-col gap-16  ">
+            <Experience
+              title="Front End Developer Collaboration"
+              date="Aug 2022 - Present"
+              descript="I have been contributing to an open-source project called ShareAm
               for over a year. The project aims to develop a web application
               that provides users with high-quality video and audio during
               screensharing sessions. As a contributor, I have been responsible
               for developing new features, fixing bugs, and improving the user
-              interface.
-            </p>
+              interface."
+              company="NajaCodePadi"
+            />
+            <Experience
+              title="Front End Developer Intern"
+              date={`Dec 2023 - Jan 2024`}
+              company="Skyscanner"
+              descript={
+                <ul className=" pl-4">
+                  <li className=" list-disc">
+                    Developed responsive website layouts using HTML, CSS,and
+                    JavaScript.
+                  </li>
+                  <li className=" list-disc">
+                    Communicated with others, demonstrating strong verbal and
+                    written communication skill
+                  </li>
+                  <li className=" list-disc">
+                    Performed assignments as determined by the supervisor.
+                  </li>
+                  <li className=" list-disc">
+                    Communicated with others, demonstrating strong verbal and
+                    written communication skill
+                  </li>
+                </ul>
+              }
+            />
+            <Experience
+              title="Front End Developer Intern"
+              date={`Feb 2023 - Present`}
+              company="Oasis Infobyte"
+              descript={
+                <ul className=" pl-4">
+                  <li className=" list-disc">
+                    Developed reusable components for future use in other
+                    projects.
+                  </li>
+                  <li className=" list-disc">
+                    Utilized version control tools such asGit and GitHub to
+                    manage codebase.
+                  </li>
+                  <li className=" list-disc">
+                    Debugged front-end code to identify and correct errors in
+                    functionality.
+                  </li>
+                  <li className=" list-disc">
+                    Resolvedbrowser compatibility issuesto ensure optimal
+                    performance.
+                  </li>
+                  <li className=" list-disc">
+                    Built user interfaces with React.js, Typescriptand Tailwind
+                    css.
+                  </li>
+                </ul>
+              }
+            />
             <span className="text-lg md:text-2xl text-[#000] text-center dark:text-[#fff] lg:text-left">
               I am always open to new a Experience.
             </span>
-          </article>
+          </div>
         </section>
       </div>
 
