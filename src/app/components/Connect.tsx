@@ -33,17 +33,15 @@ export const Connect = () => {
     )}))
     if (mail.email !== '' || mail.name !== '' || mail.message !== '') { 
       form.current 
-      ? emailjs.sendForm('service_8fuxdlk', 'template_ggn6359', form.current, '-tB1ZCDPXqFnUFmyd')
+      ? emailjs.sendForm('service_buiw2ur', 'template_ggn6359', form.current, 'eg5-wVxIoruD26lsu')
         .then((result) => {
-            console.log(result.text);
-            setTimeout(()=> {
+            // console.log(result.text);
               Swal.fire({
                 icon: 'success',
                 title: 'Email Sent!',
                 text: "I'll get back to you!",
               });
-              setMail({email : "", name : "", message : "", btn : 'Submit'})
-            }, 2000)
+              setMail({email : "", name : "", message : "", btn : 'Submit'});
         }, (error) => {
             console.log(error.text);
         }) : undefined
