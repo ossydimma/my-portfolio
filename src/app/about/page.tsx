@@ -6,6 +6,21 @@ import { Bebas_Neue } from "next/font/google";
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 
 const page = () => {
+  const stacks = [
+    "Javascript",
+    "React",
+    "Tailwind css",
+    "sass",
+    "Typescript",
+    "Next js",
+    "Git",
+    ".net",
+    "Asp.net core",
+    "Entity framework",
+    "PostgreSQL",
+    "SQL server",
+    "Blazor"
+  ];
   return (
     <div className=" mt-[12vh]  flex flex-col gap-20">
       {/* <----------------------------|  WHY WORK WITH ME  |----------------------------> */}
@@ -16,16 +31,17 @@ const page = () => {
           why work with me?
         </h1>
         <article className=" w-[95%] lg:w-[50%]  tracking-normal text-lg text-[#222] dark:text-[#c7c7c7] sm:text-xl sm:tracking-wide">
-          As a frontend developer, I bring a unique combination of technical
-          expertise, creative flair, and excellent communication skills to the
-          table. I understand the importance of user experience and design, and
-          I strive to create visually stunning and intuitive interfaces that
-          engage users and drive business results. Additionally, I am a reliable
-          and collaborative team player, always willing to go the extra mile to
-          ensure that projects are completed on time and to the highest
-          standards. By working with me, clients or employers can expect a
-          seamless and enjoyable project experience, and ultimately, a product
-          that exceeds their expectations.
+          As a full-stack developer, I bring a strong mix of technical
+          expertise, problem-solving ability, and creative thinking to every
+          project. I build both clean, responsive frontends and secure, scalable
+          backends — with a strong focus on performance, user experience, and
+          real-world impact. With a background in business management, I
+          understand the importance of aligning technical work with real
+          business goals. I'm easy to work with, proactive in communication, and
+          committed to delivering on time — without compromising on quality.
+          Whether you're a startup founder, a team lead, or a business owner,
+          working with me means partnering with someone who's fully invested in
+          the success of your product.
         </article>
       </section>
       {/* <----------------------------|  EXPERIENCE  |----------------------------> */}
@@ -123,33 +139,14 @@ const page = () => {
               I am always looking to add more skills.
             </p>
             <div className=" flex items-center justify-center flex-wrap gap-3 text-[#0a0a0a] text-sm md:text-lg dark:text-[#fff]  xl:justify-start ">
-              {/* <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                HTML
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                CSS
-              </p> */}
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                JAVASCRIPT
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                REACT
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                TAILWIND CSS
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                SASS
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                TYPESCRIPT
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                NEXT JS
-              </p>
-              <p className=" px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]">
-                GIT
-              </p>
+              {stacks.map((stack) => (
+                <p
+                  key={stack}
+                  className=" uppercase px-6 py-3 lg:px-9 md:py-4 rounded-[100px] border border-[#222] dark:border-[#c7c7c7]"
+                >
+                  {stack}
+                </p>
+              ))}
             </div>
           </div>
         </section>

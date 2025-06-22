@@ -50,10 +50,10 @@ export const Connect = () => {
   };
 
   return (
-    <main className=" border-t-2 border-[#484848]  pt-10 ">
+    <main className=" border-t-2 border-[#484848] pt-10  md:pt-3 ">
       <div className="px-[4%] lg:px-[40px] ">
         <h1
-          className={` heading-txt pb-16 uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
+          className={` heading-txt pb-10 md:pb-7 uppercase font-[400] text-[45px] text-center  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] lg:text-[60px] md:leading-[65px] xl:text-[80px] xl:leading-[90px] dark:text-[#fff] `}
         >
           let&apos;s connect
         </h1>
@@ -103,7 +103,7 @@ export const Connect = () => {
           <form 
             ref={form}
             onSubmit={sendEmail}
-            className=" w-[100%]  flex flex-col  gap-6 lg:w-[50%] ">
+            className=" w-[100%]  flex flex-col gap-6 md:gap-4 lg:w-[50%] ">
             <input
               type="text"
               name="user_name"

@@ -1,11 +1,13 @@
 import { Manrope, Bebas_Neue} from "next/font/google";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 
 
 export const Works = () => {
+
   
   const data = [
     {

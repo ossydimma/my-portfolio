@@ -13,27 +13,26 @@ interface btnType {
 export const About = ({ text, href, medias, stack, styles }: btnType) => {
   return (
     <>
-      <main className="pt-14   ">
+      <main className="pt-[4rem]   ">
         <section className=" flex flex-col mb-10 mx-4 sm:mx-[10%]   items-center">
           <h1
             className={`heading-txt  uppercase font-[700] text-[#0a0a0a]  text-3xl md:text-6xl   dark:text-[#fff] `}
           >
             about&nbsp;me
           </h1>
-          <div className=" text-center mt-2">
-            <h3
-              className={` font-semibold  uppercase pb-5 text-[#000] text-xl md:text-3xl   xl:text-4xl dark:text-white`}
-            >
-              I am Osita Jerry, a&nbsp;front-&nbsp;end&nbsp;developer. <br />{" "}
-              Has a bussiness management Background.
-            </h3>
+          <div className=" text-center mt-4">
             <p
-              className={` sm:-mx-[6%] text-[#222] text-lg tracking-wide pb-5   md:text-2xl lg:text-3xl md:tracking-wider dark:text-[#c7c7c7] `}
+              className={` sm:-mx-[6%] text-[#222] text-lg tracking-wide pb-5  md:text-2xl lg:text-[1.6rem] dark:text-[#c7c7c7] `}
             >
-              I am front-end developer that love the challenge of solving
-              complex problems and creating beautiful, functional websites.
-              Committed to continuous learning, I aspire to leverage my
-              competencies in this feild to eventually build my career.
+              Hi, I'm Osita Jerry — a full-stack web developer with a solid
+              foundation in business management and a passion for building
+              functional, scalable, and user-centered web applications. I
+              specialize in creating modern, responsive, and secure solutions
+              using React, Next.js, Tailwind CSS, and ASP.NET Core Web API. I
+              enjoy solving complex problems and bringing ideas to life through
+              clean, efficient code. Whether I'm working with startups,
+              collaborating in teams, or developing personal projects, I focus
+              on delivering meaningful digital experiences that make an impact.
             </p>
           </div>
         </section>
