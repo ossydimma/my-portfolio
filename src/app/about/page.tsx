@@ -34,11 +34,11 @@ const page = () => {
           As a full-stack developer, I bring a strong mix of technical
           expertise, problem-solving ability, and creative thinking to every
           project. I build both clean, responsive frontends and secure, scalable
-          backends — with a strong focus on performance, user experience, and
+          backends with a strong focus on performance, user experience, and
           real-world impact. With a background in business management, I
           understand the importance of aligning technical work with real
           business goals. I&apos;m easy to work with, proactive in communication, and
-          committed to delivering on time — without compromising on quality.
+          committed to delivering on time without compromising on quality.
           Whether you&apos;re a startup founder, a team lead, or a business owner,
           working with me means partnering with someone who&apos;s fully invested in
           the success of your product.
