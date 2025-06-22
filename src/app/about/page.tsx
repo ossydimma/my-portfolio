@@ -37,10 +37,10 @@ const page = () => {
           backends — with a strong focus on performance, user experience, and
           real-world impact. With a background in business management, I
           understand the importance of aligning technical work with real
-          business goals. I'm easy to work with, proactive in communication, and
+          business goals. I&apos;m easy to work with, proactive in communication, and
           committed to delivering on time — without compromising on quality.
-          Whether you're a startup founder, a team lead, or a business owner,
-          working with me means partnering with someone who's fully invested in
+          Whether you&apos;re a startup founder, a team lead, or a business owner,
+          working with me means partnering with someone who&apos;s fully invested in
           the success of your product.
         </article>
       </section>

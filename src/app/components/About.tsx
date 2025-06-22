@@ -24,13 +24,13 @@ export const About = ({ text, href, medias, stack, styles }: btnType) => {
             <p
               className={` sm:-mx-[6%] text-[#222] text-lg tracking-wide pb-5  md:text-2xl lg:text-[1.6rem] dark:text-[#c7c7c7] `}
             >
-              Hi, I'm Osita Jerry — a full-stack web developer with a solid
+              Hi, I&apos;m Osita Jerry — a full-stack web developer with a solid
               foundation in business management and a passion for building
               functional, scalable, and user-centered web applications. I
               specialize in creating modern, responsive, and secure solutions
               using React, Next.js, Tailwind CSS, and ASP.NET Core Web API. I
               enjoy solving complex problems and bringing ideas to life through
-              clean, efficient code. Whether I'm working with startups,
+              clean, efficient code. Whether I&apos;m working with startups,
               collaborating in teams, or developing personal projects, I focus
               on delivering meaningful digital experiences that make an impact.
             </p>
