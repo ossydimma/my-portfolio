@@ -93,7 +93,7 @@ export const Connect = () => {
               className={`  w-[100%] lg:w-[85%] py-4 px-0 sm:px-4 lg:px-[10%] bg-transparent sm:bg-gradient-to-l from-[#8F00FF] to-black ] text-lg tracking-wide   md:leading-6  md:text-xl text-[#000] md:text-[#c7c7c7] dark:text-[#c7c7c7]  `}
             >
               I am open to remote and onsite full-&nbsp;time, part-time, and
-              contract frontend web development jobs.
+              contract full-stack web development jobs.
             </p>
             
           </div>
