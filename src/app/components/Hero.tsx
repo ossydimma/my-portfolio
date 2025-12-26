@@ -15,7 +15,7 @@ export const Hero = () => {
           {/* <----------------------- TEXTS-----------------------------> */}
           <div className="text-center sm:text-left">
             <h1
-              className={`heading-txt uppercase font-[400] text-[40px]  leading-[42px]  text-[#0a0a0a]  sm:text-[57px] sm:leading-[58px] md:text-[65px] md:leading-[65px] xl:text-[4rem] xl:leading-[5rem] dark:text-[#fff] `}
+              className={`heading-txt uppercase font-[400] text-[40px]  leading-[42px]  text-[#0a0a0a]  sm:text-[50px] sm:leading-[58px] md:text-[65px] md:leading-[65px] xl:text-[4rem] xl:leading-[5rem] dark:text-[#fff] `}
             >
               hi, i&apos;m
               <span className=" "> osita&nbsp;cris</span>

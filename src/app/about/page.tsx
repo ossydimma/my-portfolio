@@ -90,7 +90,7 @@ const page = () => {
             />
             <Experience
               title="Front End Developer Intern"
-              date={`Feb 2023 - Present`}
+              date={`Feb 2023 - may 2023`}
               company="Oasis Infobyte"
               descript={
                 <ul className=" pl-4">
@@ -113,6 +113,39 @@ const page = () => {
                   <li className=" list-disc">
                     Built user interfaces with React.js, Typescriptand Tailwind
                     css.
+                  </li>
+                </ul>
+              }
+            />
+
+            <Experience
+              title="Full stack Developer Collaboration"
+              date={`Sept 2025 - Present`}
+              company="Devbyte community"
+              descript={
+                <ul className=" pl-4">
+                  <li className=" list-disc">
+                    Developed reusable components for future use in other
+                    projects.
+                  </li>
+                  <li className=" list-disc">
+                    Utilized version control tools such as Git and GitHub to
+                    manage codebase.
+                  </li>
+                  <li className=" list-disc">
+                    Built user interfaces with React.js and Tailwind
+                    css.
+                  </li>
+                  <li className=" list-disc">
+                    Debugged front-end code to identify and correct errors in
+                    functionality.
+                  </li>
+                  <li className=" list-disc">
+                    Resolved browser compatibility issues to ensure optimal
+                    performance.
+                  </li>
+                  <li className=" list-disc">
+                    Developed server-side business logic and api using NodeJs, JWT and ExpressJs.
                   </li>
                 </ul>
               }

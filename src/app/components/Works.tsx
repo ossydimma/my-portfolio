@@ -7,34 +7,34 @@ const manrope = Manrope({ subsets: ["latin"], weight: "700" });
 
 
 export const Works = () => {
-
+9
   
   const data = [
     {
       id: "1",
-      image: 'https://i.postimg.cc/nhgrmjGh/new-To-Do-img1.png',
-      name: "To do list",
+      image: 'https://i.postimg.cc/SNkbS3yz/Screenshot-(112).png',
+      name: "TaskHub",
       descri:
-        "Built a to-do-list that helps users enter editable tasks, allowing user to edit and delete tasks, and uses localStorage to store tasks which helps to save and display the tasks even when the page is reloaded. It is very convenient for users to not have to worry about losing their tasks due to a page refresh.",
-      stack: "HTML + CSS + JavaScript",
-      year: "2022",
-      role: "Front-end Developer",
-      codeLink: "https://github.com/ossydimma/toDoList2",
-      webLink: "https://to-do-bay-two.vercel.app/",
+        "TasksHub is a full-stack web application designed for personal productivity. It features a dual-purpose interface that allows users to manage granular tasks while maintaining a repository for long-form documentation.",
+      stack: "NextJs + Tailwind + .Net web api",
+      year: "2025",
+      role: "full-stack Developer",
+      codeLink: "https://github.com/ossydimma/TasksHubApp",
+      webLink: "https://tasks-hub-app.vercel.app",
     },
     
     
     {
       id: "2",
-      image: 'https://i.postimg.cc/VLDcrJc0/sneaker-img.jpg',
-      name: "E-commerce product page",
+      image: 'https://i.postimg.cc/YCF95T8D/Screenshot-(114).png',
+      name: "Devbyte community",
       descri:
-        "Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.",
-      stack: "React + Typescript + Sass",
-      year: "2023",
-      role: "Front-end Developer",
-      codeLink: "https://github.com/ossydimma/sneakers-store",
-      webLink: "https://e-commerce-sneaker-store.vercel.app/",
+        "Devbyte community is a unified ecosystem for tech professionals to connect and grow. The platform centralizes community events, curated job boards, peer-led blogs, and learning resources. It’s a collaborative space designed to bridge the gap between networking, education, and career advancement.",
+      stack: "React + Tailwind + ExpressJs",
+      year: "2025",
+      role: "Full-stack Developer",
+      codeLink: "https://github.com/DevByte-Community",
+      webLink: "undefined",
     },
    
     {
