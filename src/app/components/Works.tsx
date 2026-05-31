@@ -24,18 +24,18 @@ export const Works = () => {
     },
     
     
-    {
-      id: "2",
-      image: 'https://i.postimg.cc/YCF95T8D/Screenshot-(114).png',
-      name: "Devbyte community",
-      descri:
-        "Devbyte community is a unified ecosystem for tech professionals to connect and grow. The platform centralizes community events, curated job boards, peer-led blogs, and learning resources. It’s a collaborative space designed to bridge the gap between networking, education, and career advancement.",
-      stack: "React + Tailwind + ExpressJs",
-      year: "2025",
-      role: "Full-stack Developer",
-      codeLink: "https://github.com/DevByte-Community",
-      webLink: "undefined",
-    },
+    // {
+    //   id: "2",
+    //   image: 'https://i.postimg.cc/YCF95T8D/Screenshot-(114).png',
+    //   name: "Devbyte community",
+    //   descri:
+    //     "Devbyte community is a unified ecosystem for tech professionals to connect and grow. The platform centralizes community events, curated job boards, peer-led blogs, and learning resources. It’s a collaborative space designed to bridge the gap between networking, education, and career advancement.",
+    //   stack: "React + Tailwind + ExpressJs",
+    //   year: "2025",
+    //   role: "Full-stack Developer",
+    //   codeLink: "https://github.com/DevByte-Community",
+    //   webLink: "undefined",
+    // },
    
     {
       id: "3",
